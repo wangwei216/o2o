@@ -1,0 +1,32 @@
+<?xml  version="1.0"  encoding="UTF-8"?>
+<web-app version="2.4"  xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns:web="http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+          http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+
+  <!--这个web.xml的配置文件就是把springMVC的给整合起来的配置文件-->
+  <display-name>Archetype Created Web Application</display-name>
+    <welcome-file-list>
+      <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
+
+      <!--把这个前端控制器都给整合到一起，包括跟配置spring相关的xml配置文件
+      ，当做一个servlet给注入进去-->
+<servlet>
+  <servlet-name>spring-dispatcher</servlet-name>
+  <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  <init-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:spring/spring-*.xml</param-value>
+  </init-param>
+</servlet>
+
+      <!--这个就是配置servlet前端控制器的mapping映射-->
+  <servlet-mapping>
+    <servlet-name>spring-dispatcher</servlet-name>
+      <!--这个就是说把所有默认的url请求都转入到这个前端控制器dispatcher去处理,"/"就是默认所有请求都嫁给前端控制器来处理-->
+    <url-pattern>/</url-pattern>
+  </servlet-mapping>
+
+</web-app>
