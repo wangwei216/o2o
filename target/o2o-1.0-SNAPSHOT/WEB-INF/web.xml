@@ -27,8 +27,6 @@
     <servlet-name>spring-dispatcher</servlet-name>
       <!--这个就是说把所有默认的url请求都转入到这个前端控制器dispatcher去处理,"/"就是默认所有请求都嫁给前端控制器来处理-->
     <url-pattern>/</url-pattern>
-
-
   </servlet-mapping>
 
 </web-app>
