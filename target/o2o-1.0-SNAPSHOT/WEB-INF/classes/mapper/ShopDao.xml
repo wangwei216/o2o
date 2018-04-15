@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+	namespace：必须与对应的接口全类名一致
+	id:必须与对应接口的某个对应的方法名一致
+
+ -->
+<mapper namespace="com.imooc.o2o.dao.ShopDao">
+
+    <!--keyProperty这个是跟shop实体属性保持一致的那个-->
+    <insert id="insertShop" useGeneratedKeys="true" keyColumn="shop_id" keyProperty="shopId">
+        INSERT INTO
+        tb_shop(owner_id, area_id, shop_category_id, parent_category_id, shop_name, shop_desc, shop_addr,
+                phone, shop_img, priority, create_time, last_edit_time, advice)
+        VALUES
+        (#{owner.userId},#{area.areaId},#{shopCategory.shopCategoryId},#{shopName},
+        #{shopDesc},#{shopAddr},#{phone},#{shopImg},#{priority},#{createTime}
+        ,#{lastEditTime},#{enableStatus},#{advice})
+
+    </insert>
+    <!--这个就是修改店铺信息的映射的SQL语句-->
+    <update id="updateShop" parameterType="com.imooc.o2o.entity.Shop">
+        update tb_shop
+        <set>
+            <if test="shopName != null">shop_name=#{shopName},</if>
+            <if test="shopDesc != null">shop_desc=#{shopDesc},</if>
+            <if test="shopAddr != null">shop_addr=#{shopAddr},</if>
+            <if test="phone != null">phone=#{phone},</if>
+            <if test="shopImg != null">shop_img=#{shopImg},</if>
+            <if test="longitude != null">longitude=#{longitude},</if>
+            <if test="latitude != null">latitude=#{latitude},</if>
+            <if test="priority != null">priority=#{priority},</if>
+            <if test="lastEditTime != null">last_edit_time=#{lastEditTime},</if>
+            <if test="enableStatus != null">enable_status=#{enableStatus},</if>
+            <if test="advice != null">advice=#{advice},</if>
+            <if test="area != null">area_id=#{area.areaId},</if>
+            <if test="shopCategory != null">shop_category_id=#{shopCategory.shopCategoryId},</if>
+            <if test="parentCategory != null">parent_category_id=#{parentCategory.shopCategoryId}</if>
+        </set>
+        where shop_id=#{shopId}
+    </update>
+
+</mapper>
+

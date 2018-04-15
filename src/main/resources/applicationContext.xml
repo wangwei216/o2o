@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:jee="http://www.springframework.org/schema/jee"  
+     xmlns:context="http://www.springframework.org/schema/context" xmlns:p="http://www.springframework.org/schema/p"  
+     xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:util="http://www.springframework.org/schema/util" 
+     xmlns:aop="http://www.springframework.org/schema/aop"
+ 	 xmlns:tx="http://www.springframework.org/schema/tx" 
+     xsi:schemaLocation="http://www.springframework.org/schema/beans   
+            http://www.springframework.org/schema/beans/spring-beans-4.0.xsd   
+            http://www.springframework.org/schema/mvc   
+            http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd   
+            http://www.springframework.org/schema/context   
+            http://www.springframework.org/schema/context/spring-context-4.0.xsd   
+            http://www.springframework.org/schema/aop   
+            http://www.springframework.org/schema/aop/spring-aop-4.0.xsd   
+            http://www.springframework.org/schema/tx   
+            http://www.springframework.org/schema/tx/spring-tx.xsd">  
+         
+       <!-- 引入jdbc配置 -->
+    <context:property-placeholder location="classpath:properties/db.properties"/>
+     <!-- 扫描文件(自动将service层注入) -->
+    <context:component-scan base-package="com.imooc.o2o.service"/>
+    <!-- 配置数据源 -->
+    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource">
+        <property name="driverClass" value="${jdbc.driver}"/>
+        <property name="jdbcUrl" value="${jdbc.url}"/>
+        <property name="user" value="${jdbc.username}"/>
+        <property name="password" value="${jdbc.password}"/>
+        <!-- 连接池中保存的最大连接数目 -->
+        <property name="maxPoolSize" value="20"/>
+        <!-- 连接池中保存的最少连接数目 -->
+        <property name="minPoolSize" value="2"/>
+       <!--  初始化连接大小 -->
+        <property name="initialPoolSize" value="2"/>
+       <!--  获取连接最大等待时间 -->
+        <property name="maxConnectionAge" value="6000"/>
+        <!-- 连接池最大空闲 -->
+        <property name="maxIdleTime" value="60"/>
+    </bean>
+
+    <!-- 配置sqlSessionFactory 并将数据源注入 -->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <!-- 注入数据源 -->
+        <property name="dataSource" ref="dataSource"/>
+       <!--  指定要使用到到mybatis配置文件 -->
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+        <!-- 用于配置mapper映射xml -->
+        <property name="mapperLocations" value="classpath:mapper/*.xml"/>
+    </bean>
+   <!--  创建数据映射器 -->
+    <bean  class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+          <property name="basePackage" value="com.imooc.o2o.dao"/>
+          <property name="sqlSessionFactoryBeanName" value="sqlSessionFactory" />  
+    </bean>
+    <!-- 对数据源进行事务管理 -->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+    
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">  
+            <property name="maxUploadSize" value="2097152"></property> 
+            <property name="defaultEncoding" value="UTF-8" />  
+        </bean>
+
+ <!--   &lt;!&ndash; 避免IE执行AJAX时,返回JSON出现下载文件 &ndash;&gt;
+    <bean id="mappingJacksonHttpMessageConverter"
+          class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter">
+        <property name="supportedMediaTypes">
+            <list>
+                <value>text/html;charset=UTF-8</value>
+            </list>
+        </property>
+    </bean>
+-->
+    
+<!--    <mvc:annotation-driven>
+        <mvc:message-converters register-defaults="true">
+            <bean
+                    class="org.springframework.http.converter.json.MappingJacksonHttpMessageConverter"
+                    p:supportedMediaTypes="*/*" />
+        </mvc:message-converters>
+    </mvc:annotation-driven>-->
+
+   <!-- <bean
+            class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <ref bean="mappingJacksonHttpMessageConverter" />
+            </list>
+        </property>
+    </bean>-->
+
+    <mvc:default-servlet-handler />
+    <!-- 启动Spring MVC的注解功能，完成请求和注解POJO的映射 -->
+  <!--  <bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <ref bean="mappingJacksonHttpMessageConverter" />&lt;!&ndash; json转换器 &ndash;&gt;
+            </list>
+        </property>
+    </bean>
+    -->
+    <tx:advice id="transactionAdvice" transaction-manager="transactionManager">  
+        <tx:attributes>  
+            <tx:method name="add*" propagation="REQUIRED" />  
+            <tx:method name="append*" propagation="REQUIRED" />  
+            <tx:method name="insert*" propagation="REQUIRED" />  
+            <tx:method name="save*" propagation="REQUIRED" />  
+            <tx:method name="update*" propagation="REQUIRED" />  
+            <tx:method name="modify*" propagation="REQUIRED" />  
+            <tx:method name="edit*" propagation="REQUIRED" />  
+            <tx:method name="delete*" propagation="REQUIRED" />  
+            <tx:method name="remove*" propagation="REQUIRED" />  
+            <tx:method name="repair" propagation="REQUIRED" />  
+            <tx:method name="delAndRepair" propagation="REQUIRED" />  
+  
+            <tx:method name="get*" propagation="SUPPORTS" />  
+            <tx:method name="find*" propagation="SUPPORTS" />  
+            <tx:method name="load*" propagation="SUPPORTS" />  
+            <tx:method name="search*" propagation="SUPPORTS" />  
+            <tx:method name="datagrid*" propagation="SUPPORTS" />  
+  
+            <tx:method name="*" propagation="SUPPORTS" />  
+        </tx:attributes>  
+    </tx:advice>  
+    <!--<aop:config>
+        <aop:pointcut id="transactionPointcut" expression="execution(* cn.reatent.service..*impl.*(..))" />  
+        <aop:advisor pointcut-ref="transactionPointcut" advice-ref="transactionAdvice" />  
+    </aop:config>-->
+  
+</beans> 

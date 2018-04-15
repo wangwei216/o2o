@@ -16,10 +16,10 @@
     </settings>
 
 
-    <plugins>
+    <!--<plugins>
         <plugin interceptor="cn.edu.neu.core.common.PageInterceptor">
             <property name="databaseType" value="mysql"/>
         </plugin>
-    </plugins>
+    </plugins>-->
 
 </configuration>
