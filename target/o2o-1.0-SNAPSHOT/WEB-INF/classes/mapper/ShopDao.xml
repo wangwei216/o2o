@@ -8,6 +8,66 @@
  -->
 <mapper namespace="com.imooc.o2o.dao.ShopDao">
 
+    <resultMap id="shopMap" type="com.imooc.o2o.entity.Shop">
+        <id column="shop_id" property="shopId" />
+        <result column="owner_id" property="ownerId" />
+        <result column="shop_category_id" property="shopCategoryId" />
+        <result column="shop_name" property="shopName" />
+        <result column="shop_desc" property="shopDesc" />
+        <result column="shop_addr" property="shopAddr" />
+        <result column="phone" property="phone" />
+        <result column="shop_img" property="shopImg" />
+        <result column="longitude" property="longitude" />
+        <result column="latitude" property="latitude" />
+        <result column="priority" property="priority" />
+        <result column="create_time" property="createTime" />
+        <result column="last_edit_time" property="lastEditTime" />
+        <result column="enable_status" property="enableStatus" />
+        <result column="advice" property="advice" />
+        <association property="area" column="area_id"
+                     javaType="com.imooc.o2o.entity.Area">
+            <id column="area_id" property="areaId" />
+            <result column="area_name" property="areaName" />
+            <result column="area_desc" property="areaDesc" />
+            <result column="priority" property="priority" />
+            <result column="create_time" property="createTime" />
+            <result column="last_edit_time" property="lastEditTime" />
+        </association>
+        <association property="shopCategory" column="shop_category_id"
+                     javaType="com.imooc.o2o.entity.ShopCategory">
+            <id column="shop_category_id" property="shopCategoryId" />
+            <result column="shop_category_name" property="shopCategoryName" />
+            <result column="shop_category_desc" property="shopCategoryDesc" />
+            <result column="shop_category_img" property="shopCategoryImg" />
+            <result column="priority" property="priority" />
+            <result column="create_time" property="createTime" />
+            <result column="last_edit_time" property="lastEditTime" />
+        </association>
+        <association property="parentCategory" column="parent_category_id"
+                     javaType="com.imooc.o2o.entity.ShopCategory">
+            <id column="parent_category_id" property="shopCategoryId" />
+            <result column="shop_category_name" property="shopCategoryName" />
+            <result column="shop_category_desc" property="shopCategoryDesc" />
+            <result column="shop_category_img" property="shopCategoryImg" />
+            <result column="priority" property="priority" />
+            <result column="create_time" property="createTime" />
+            <result column="last_edit_time" property="lastEditTime" />
+        </association>
+        <collection property="staffList" column="shop_id"
+                    ofType="com.imooc.o2o.entity.ShopAuthMap">
+            <id column="shop_auth_id" property="shopAuthId" />
+            <result column="employee_id" property="employeeId" />
+            <result column="shop_id" property="shopId" />
+            <result column="name" property="name" />
+            <result column="title" property="title" />
+            <result column="title_flag" property="titleFlag" />
+            <result column="create_time" property="createTime" />
+            <result column="last_edit_time" property="lastEditTime" />
+            <result column="enable_status" property="enableStatus" />
+        </collection>
+    </resultMap>
+
+
     <!--keyProperty这个是跟shop实体属性保持一致的那个-->
     <insert id="insertShop" useGeneratedKeys="true" keyColumn="shop_id" keyProperty="shopId">
         INSERT INTO
@@ -41,5 +101,143 @@
         where shop_id=#{shopId}
     </update>
 
+    <!--是映射的是通过shopId来去查询shop,因为不只含有shop类型，还有别的类型-->
+    <select id="queryByShopId" resultMap="shopMap" parameterType="Long">
+        <!-- 具体的sql -->
+        SELECT
+        shop_id,
+        owner_id,
+        area_id,
+        shop_category_id,
+        parent_category_id,
+        shop_name,
+        shop_desc,
+        shop_addr,
+        phone,
+        shop_img,
+        longitude,
+        latitude,
+        priority,
+        create_time,
+        last_edit_time,
+        enable_status,
+        advice
+        FROM
+        tb_shop s ,
+        tb_area a,
+        tb_shop_category sc
+        WHERE
+        shop_id = #{shopId}
+    </select>
+
+    <!--这个是查询商铺列表，用分页效果来实现-->
+    <select id="queryShopList" resultMap="shopMap">
+    SELECT
+    s.shop_id,
+    s.owner_id,
+    a.area_id,
+    a.area_name
+   sc. shop_category_id,
+    sc.shop_category_name
+    s.shop_name,
+    s.shop_desc,
+    s.shop_addr,
+    s.phone,
+    s.shop_img,
+   s. priority,
+    s.create_time,
+   s. last_edit_time,
+    s.  enable_status,
+  s. advice
+    FROM
+        tb_shop s ,
+        tb_area a,
+        tb_shop_category sc
+        <where>
+            <if test="shopCondition.shopId!=null">
+                and s.shop_id = #{shopCondition.shopId}
+            </if>
+       <!--     <if test="shopCondition.shopCategory!=null
+				 and shopCondition.shopCategory.shopCategoryId!=null">
+                and sc.shop_category_id =
+                #{shopCondition.shopCategory.shopCategoryId}
+            </if>-->
+
+            <if test="shopCondition.area!=null
+				 and shopCondition.area.areaId!=null">
+                and s.area_id =
+                #{shopCondition.area.areaId}
+            </if>
+            <if test="shopCondition.parentCategory!=null
+				 and shopCondition.parentCategory.shopCategoryId!=null">
+                and sc.parent_category_id =
+                #{shopCondition.parentCategory.shopCategoryId}
+            </if>
+            <!-- 写like语句的时候 一般都会写成 like '% %' 在mybatis里面写就是应该是 like '%${name} %' 而不是
+                '%#{name} %' ${name} 是不带单引号的，而#{name} 是带单引号的 -->
+            <if test="shopCondition.shopName!=null">
+                and s.shop_name like '%${shopCondition.shopName}%'
+            </if>
+            <if test="shopCondition.enableStatus!=null">
+                and s.enable_status = #{shopCondition.enableStatus}
+            </if>
+           <!-- <if test="shopCondition.owner!=null and shopCondition.owner.userId!=null">
+                and s.owner_id =#{shopCondition.owner.userId}
+            </if>-->
+            AND
+            s.area_id=a.area_id
+            AND
+            s.shop_category_id=sc.shop_category_id
+        </where>
+        ORDER BY
+        s.priority DESC
+        LIMIT #{rowIndex},#{pageSize};
+    </select>
+    <!--这个是对分页所需要的查询一共能查询到多少条数据来进行分页-->
+    <select id="queryShopCount" resultType="int">
+        SELECT
+        count(1)
+        FROM
+        tb_shop s,
+        tb_area a,
+        tb_shop_category sc
+        <where>
+            <if test="shopCondition.shopId!=null">
+                and s.shop_id = #{shopCondition.shopId}
+            </if>
+            <if test="shopCondition.shopCategory!=null
+				 and shopCondition.shopCategory.shopCategoryId!=null">
+                and sc.shop_category_id =
+                #{shopCondition.shopCategory.shopCategoryId}
+            </if>
+
+            <if test="shopCondition.area!=null
+				 and shopCondition.area.areaId!=null">
+                and s.area_id =
+                #{shopCondition.area.areaId}
+            </if>
+            <if test="shopCondition.parentCategory!=null
+				 and shopCondition.parentCategory.shopCategoryId!=null">
+                and sc.parent_category_id =
+                #{shopCondition.parentCategory.shopCategoryId}
+            </if>
+            <!-- 写like语句的时候 一般都会写成 like '% %' 在mybatis里面写就是应该是 like '%${name} %' 而不是
+                '%#{name} %' ${name} 是不带单引号的，而#{name} 是带单引号的 -->
+            <if test="shopCondition.shopName!=null">
+                and s.shop_name like '%${shopCondition.shopName}%'
+            </if>
+            <if test="shopCondition.enableStatus!=null">
+                and s.enable_status = #{shopCondition.enableStatus}
+            </if>
+            <if test="shopCondition.owner!=null and shopCondition.owner.userId!=null">
+                and s.owner_id ={shopCondition.owner.userId}
+            </if>
+            AND
+            s.area_id=a.area_id
+            AND
+            s.shop_category_id=sc.shop_category_id
+        </where>
+
+    </select>
 </mapper>
 

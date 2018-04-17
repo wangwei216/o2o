@@ -8,12 +8,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-/*
-*
-* 这个封装的是专门对图片进行处理的
-*
-* */
-
 public class ImageUtil {
 	public static String generateThumbnail(CommonsMultipartFile thumbnail, String targetAddr) {
 		String realFileName = FileUtil.getRandomFileName();
@@ -76,5 +70,10 @@ public class ImageUtil {
 	private static String getFileExtension(CommonsMultipartFile cFile) {
 		String originalFileName = cFile.getOriginalFilename();
 		return originalFileName.substring(originalFileName.lastIndexOf("."));
+	}
+
+	/*这个是删除文件*/
+	public static void deleteFileOrPath(String storePath){
+		File fileOrPath ;
 	}
 }

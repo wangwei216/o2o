@@ -8,6 +8,63 @@
         <param-value>classpath:applicationContext.xml</param-value>  
     </context-param>
 
+    <servlet>
+        <!-- 生成图片的Servlet -->
+        <servlet-name>Kaptcha</servlet-name>
+        <servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+
+        <!-- 是否有边框 -->
+        <init-param>
+            <param-name>kaptcha.border</param-name>
+            <param-value>no</param-value>
+        </init-param>
+        <!-- 字体颜色 -->
+        <init-param>
+            <param-name>kaptcha.textproducer.font.color</param-name>
+            <param-value>red</param-value>
+        </init-param>
+        <!-- 图片宽度 -->
+        <init-param>
+            <param-name>kaptcha.image.width</param-name>
+            <param-value>135</param-value>
+        </init-param>
+        <!-- 使用哪些字符生成验证码 -->
+        <init-param>
+            <param-name>kaptcha.textproducer.char.string</param-name>
+            <param-value>ACDEFHKPRSTWX345679</param-value>
+        </init-param>
+        <!-- 图片高度 -->
+        <init-param>
+            <param-name>kaptcha.image.height</param-name>
+            <param-value>50</param-value>
+        </init-param>
+        <!-- 字体大小 -->
+        <init-param>
+            <param-name>kaptcha.textproducer.font.size</param-name>
+            <param-value>43</param-value>
+        </init-param>
+        <!-- 干扰线的颜色 -->
+        <init-param>
+            <param-name>kaptcha.noise.color</param-name>
+            <param-value>black</param-value>
+        </init-param>
+        <!-- 字符个数 -->
+        <init-param>
+            <param-name>kaptcha.textproducer.char.length</param-name>
+            <param-value>4</param-value>
+        </init-param>
+        <!-- 使用哪些字体 -->
+        <init-param>
+            <param-name>kaptcha.textproducer.font.names</param-name>
+            <param-value>Arial</param-value>
+        </init-param>
+    </servlet>
+    <!-- 映射的url -->
+    <servlet-mapping>
+        <servlet-name>Kaptcha</servlet-name>
+        <url-pattern>/Kaptcha</url-pattern>
+    </servlet-mapping>
+
     <listener>   
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>  
 	</listener>  
@@ -32,7 +89,7 @@
   
   
     <!-- Spring MVC servlet 这个也就是配置springMVC的前端控制器 -->
-    <servlet>  
+    <servlet>
         <servlet-name>SpringMVC</servlet-name>  
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>  
         <init-param>  
@@ -44,10 +101,9 @@
     </servlet>  
     <servlet-mapping>  
         <servlet-name>SpringMVC</servlet-name>  
-        <!-- 此处可以可以配置成*.do，对应struts的后缀习惯 -->  
+        <!-- 此处可以可以配置成*.do，对应struts的后缀习惯 -->
         <url-pattern>/</url-pattern>
     </servlet-mapping>
-
 
     <!--进来的第一个界面-->
     <welcome-file-list>  
