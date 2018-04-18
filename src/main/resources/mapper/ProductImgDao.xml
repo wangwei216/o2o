@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+	namespace：必须与对应的接口全类名一致
+	id:必须与对应接口的某个对应的方法名一致
+
+ -->
+    <mapper namespace="com.imooc.o2o.dao.ProductImgDao">
+
+    <!--映射的SQL是ProductImg实体中批量插入商品详情需要展示的照片ProductImg信息的功能-->
+        <insert id="batchInsertProductImg"
+                parameterType="java.util.List">
+            INSERT INTO
+            tb_product_img(img_addr, img_desc,priority, create_time, product_id)
+            VALUES
+            <foreach collection="list" item="productImg"
+                    separator="," index="index">
+                (
+               #{productImg.imgAddr},#{productImg.imgDesc},#{productImg.priority}
+                ,#{productImg.createTime},#{productImg.productId}
+                )
+            </foreach>
+
+        </insert>
+
+
+
+    </mapper>
+

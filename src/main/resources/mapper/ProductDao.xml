@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--
+	namespace：必须与对应的接口全类名一致
+	id:必须与对应接口的某个对应的方法名一致
+
+ -->
+    <mapper namespace="com.imooc.o2o.dao.ProductDao">
+
+    <!--映射的SQL是Product实体中的插入Product信息的功能-->
+        <insert id="insertProduct"
+                parameterType="com.imooc.o2o.entity.Product"
+                useGeneratedKeys="true"
+                keyColumn="product_id"
+                keyProperty="productId">
+            INSERT INTO
+            tb_product(product_name, product_desc, img_addr,
+            normal_price, promotion_price, priority, create_time,
+            last_edit_time, enable_status, point, product_category_id, shop_id)
+            VALUES
+            (
+            #{productName},#{productDesc},#{imgAddr},#{normalPrice}
+            ,#{promotionPrice},#{priority},#{createTime},#{lastEditTime}
+            ,#{enableStatus},#{productCategory.productCategoryId},#{shop.shopId}
+            )
+
+        </insert>
+
+
+
+    </mapper>
+

@@ -1,7 +1,9 @@
 package com.imooc.o2o.web.shopadmin;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.imooc.o2o.dto.ImageHolder;
 import com.imooc.o2o.dto.ShopExecution;
+import com.imooc.o2o.dto.ShopOperationException;
 import com.imooc.o2o.entity.Area;
 import com.imooc.o2o.entity.PersonInfo;
 import com.imooc.o2o.entity.Shop;
@@ -10,6 +12,7 @@ import com.imooc.o2o.enums.ShopStateEnum;
 import com.imooc.o2o.service.AreaService;
 import com.imooc.o2o.service.ShopCategoryService;
 import com.imooc.o2o.service.ShopService;
+import com.imooc.o2o.util.CodeUtil;
 import com.imooc.o2o.util.HttpServletRequestUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -63,6 +66,77 @@ public class ShopManagementController {
 		}
 		return modelMap;
 	}
+
+
+	/*修改店铺信息*/
+	@RequestMapping(value = "/modifyshop", method = RequestMethod.POST)
+	@ResponseBody
+	private Map<String, Object> modifyShop(HttpServletRequest request) {
+		boolean statusChange = HttpServletRequestUtil.getBoolean(request,
+				"statusChange");
+		Map<String, Object> modelMap = new HashMap<String, Object>();
+		if (!statusChange && !CodeUtil.checkVerifyCode(request)) {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", "输入了错误的验证码");
+			return modelMap;
+		}
+		ObjectMapper mapper = new ObjectMapper();
+		Shop shop = null;
+		String shopStr = HttpServletRequestUtil.getString(request, "shopStr");
+		MultipartHttpServletRequest multipartRequest = null;
+		CommonsMultipartFile shopImg = null;
+		CommonsMultipartResolver multipartResolver = new CommonsMultipartResolver(
+				request.getSession().getServletContext());
+		if (multipartResolver.isMultipart(request)) {
+			multipartRequest = (MultipartHttpServletRequest) request;
+			shopImg = (CommonsMultipartFile) multipartRequest
+					.getFile("shopImg");
+		}
+		try {
+			shop = mapper.readValue(shopStr, Shop.class);
+		} catch (Exception e) {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", e.toString());
+			return modelMap;
+		}
+		Shop currentShop = (Shop) request.getSession().getAttribute(
+				"currentShop");
+		shop.setShopId(currentShop.getShopId());
+
+		//修改店铺信息
+		if (shop != null && shop.getShopId() != null) {
+			ShopExecution se;
+			try {
+
+				if (shopImg==null) {
+					se = shopService.modifyShop(shop,null);
+				} else {
+					ImageHolder imageHolder = new ImageHolder(shopImg.getOriginalFilename(),shopImg.getInputStream());
+					se = shopService.modifyShop(shop,imageHolder);
+				}
+				if (se.getState()==ShopStateEnum.SUCCESS.getState()){
+					modelMap.put("success", true);
+				}
+				else {
+					modelMap.put("success", false);
+					modelMap.put("errMsg", se.getStateInfo());
+				}
+			} catch (ShopOperationException e) {
+				modelMap.put("success", false);
+				modelMap.put("errMsg", e.getMessage());
+			} catch (IOException e){
+				modelMap.put("success", false);
+				modelMap.put("errMsg", e.getMessage());
+			}
+
+		} else {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", "请输入修改店铺信息");
+		}
+		return modelMap;
+	}
+
+
 
 	/*
 	一、上传图片第一步：
@@ -119,10 +193,12 @@ public class ShopManagementController {
 
 		if (shop != null && shopImg != null) {
 			try {
+				//这里是又重新改了一下代码，使用到了
+				ImageHolder imageHolder = new ImageHolder(shopImg.getOriginalFilename(),shopImg.getInputStream());
 				PersonInfo user = (PersonInfo) request.getSession().getAttribute("user");
 				shop.setOwnerId(user.getUserId());
 
-				ShopExecution se = shopService.addShop(shop, shopImg);
+				ShopExecution se = shopService.addShop(shop, imageHolder);
 
 				if (se.getState() == ShopStateEnum.CHECK.getState()) {
 					modelMap.put("success", true);

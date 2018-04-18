@@ -6,421 +6,35 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24b2d95f-d0bc-4c7a-a832-be789024dd47" name="Default" comment="重新配置了一遍SSM的配置文件">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ProductCategoryDao.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/Result.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/ShopOperationException.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/enums/ProductStateEnum.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ProductCategoryService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/serviceImpl/ProductCategoryServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/serviceImpl/ShopServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/util/PageCalculator.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/util/ShopDao.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ProductCategoryManagementController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ShopManagementController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ProductCategoryDao.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/html/shop/productcategorymanage.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/html/shop/shoplist.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/html/shop/shopmanage.html" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/shop/awarddelivercheck.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/shop/awardmanage.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/shop/base/common.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/shop/base/jquery.confirm.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/shop/base/jquery.validate.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/shop/model/productDirector.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/shop/productbuycheck.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/shop/productcategorymanage.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/shop/productmanage.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/shop/shoplist.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/shop/shopmanage.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/css/shop/usershopcheck.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/common/commonutil.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/common/echarts.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/common/echarts.simple.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/common/jquery.form.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/frontend/customerbind.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/frontend/index.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/frontend/mypoint.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/frontend/myrecord.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/frontend/pointrecord.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/frontend/productdetail.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/frontend/shopdetail.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/frontend/shoplist.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/awarddelivercheck.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/awardedit.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/awardmanage.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/base/common.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/base/commonutil.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/base/jquery-1.11.2.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/base/jquery.confirm.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/base/jquery.form.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/changepsw.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/forgetpsw.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/myshops.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/ownerbind.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/ownerlogin.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/productbuycheck.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/productcategorymanage.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/productedit.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/productmanage.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/register.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/shopauthedit.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/shopauthmanage.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/shopedit.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/shoplist#U526f#U672c.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/shoplist.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/shopmanage.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/shop/usershopcheck.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/areamanage.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/My97DatePicker/My97DatePicker.htm" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/My97DatePicker/WdatePicker.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/My97DatePicker/calendar.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/My97DatePicker/config.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/My97DatePicker/lang/en.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/My97DatePicker/lang/zh-cn.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/My97DatePicker/lang/zh-tw.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/My97DatePicker/skin/WdatePicker.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/My97DatePicker/skin/datePicker.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/My97DatePicker/skin/default/datepicker.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/My97DatePicker/skin/default/img.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/My97DatePicker/skin/whyGreen/bg.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/My97DatePicker/skin/whyGreen/datepicker.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/My97DatePicker/skin/whyGreen/img.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/js/easyloader.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/js/easyui-lang-zh_CN.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/js/jquery-1.4.4.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/js/jquery.easyui.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.accordion.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.calendar.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.combo.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.combobox.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.combogrid.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.combotree.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.datagrid.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.datebox.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.datetimebox.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.dialog.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.draggable.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.droppable.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.form.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.layout.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.linkbutton.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.menu.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.menubutton.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.messager.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.numberbox.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.numberspinner.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.pagination.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.panel.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.parser.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.resizable.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.spinner.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.splitbutton.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.tabs.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.timespinner.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.tree.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.treegrid.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.validatebox.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/plugins/jquery.window.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/easyui.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/accordion_collapse.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/accordion_expand.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/button_a_bg.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/button_plain_hover.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/button_span_bg.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/calendar_nextmonth.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/calendar_nextyear.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/calendar_prevmonth.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/calendar_prevyear.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/combo_arrow.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/datagrid_header_bg.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/datagrid_row_collapse.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/datagrid_row_expand.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/datagrid_sort_asc.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/datagrid_sort_desc.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/datagrid_title_bg.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/datebox_arrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/layout_button_down.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/layout_button_left.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/layout_button_right.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/layout_button_up.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/main_20.jpg" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/menu.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/menu_downarrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/menu_rightarrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/menu_sep.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/menu_split_downarrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/messager_error.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/messager_info.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/messager_question.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/messager_warning.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/pagination_first.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/pagination_last.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/pagination_load.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/pagination_loading.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/pagination_next.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/pagination_prev.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/panel_loading.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/panel_title.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/panel_tool_collapse.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/panel_tool_expand.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/panel_tools.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/spinner_arrow_down.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/spinner_arrow_up.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/tabs_active.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/tabs_close.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/tabs_enabled.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/tabs_leftarrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/tabs_rightarrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/tree_arrows.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/tree_checkbox_0.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/tree_checkbox_1.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/tree_checkbox_2.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/tree_dnd_no.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/tree_dnd_yes.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/tree_file.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/tree_folder.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/tree_folder_open.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/tree_loading.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/validatebox_pointer.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/dayun/images/validatebox_warning.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/accordion.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/calendar.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/combo.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/combobox.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/datagrid.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/datebox.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/dialog.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/easyui.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/accordion_collapse.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/accordion_expand.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/button_a_bg.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/button_plain_hover.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/button_span_bg.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/calendar_nextmonth.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/calendar_nextyear.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/calendar_prevmonth.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/calendar_prevyear.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/combo_arrow.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/datagrid_header_bg.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/datagrid_row_collapse.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/datagrid_row_expand.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/datagrid_sort_asc.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/datagrid_sort_desc.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/datagrid_title_bg.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/datebox_arrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/layout_button_down.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/layout_button_left.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/layout_button_right.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/layout_button_up.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/menu.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/menu_downarrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/menu_rightarrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/menu_sep.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/menu_split_downarrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/messager_error.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/messager_info.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/messager_question.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/messager_warning.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/pagination_first.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/pagination_last.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/pagination_load.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/pagination_loading.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/pagination_next.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/pagination_prev.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/panel_loading.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/panel_title.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/panel_tool_collapse.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/panel_tool_expand.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/panel_tools.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/spinner_arrow_down.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/spinner_arrow_up.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/tabs_active.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/tabs_close.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/tabs_enabled.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/tabs_leftarrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/tabs_rightarrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/tree_arrows.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/tree_checkbox_0.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/tree_checkbox_1.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/tree_checkbox_2.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/tree_dnd_no.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/tree_dnd_yes.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/tree_file.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/tree_folder.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/tree_folder_open.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/tree_loading.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/validatebox_pointer.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/images/validatebox_warning.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/layout.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/linkbutton.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/menu.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/menubutton.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/messager.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/pagination.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/panel.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/spinner.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/splitbutton.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/tabs.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/tree.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/validatebox.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/default/window.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/accordion.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/calendar.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/combo.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/combobox.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/datagrid.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/datebox.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/dialog.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/easyui.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/accordion_collapse.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/accordion_expand.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/button_a_bg.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/button_plain_hover.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/button_span_bg.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/calendar_nextmonth.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/calendar_nextyear.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/calendar_prevmonth.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/calendar_prevyear.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/combo_arrow.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/datagrid_header_bg.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/datagrid_row_collapse.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/datagrid_row_expand.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/datagrid_sort_asc.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/datagrid_sort_desc.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/datagrid_title_bg.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/datebox_arrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/layout_button_down.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/layout_button_left.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/layout_button_right.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/layout_button_up.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/menu.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/menu_downarrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/menu_rightarrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/menu_sep.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/menu_split_downarrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/messager_error.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/messager_info.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/messager_question.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/messager_warning.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/pagination_first.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/pagination_last.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/pagination_load.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/pagination_loading.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/pagination_next.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/pagination_prev.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/panel_loading.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/panel_title.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/panel_tool_collapse.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/panel_tool_expand.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/panel_tools.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/spinner_arrow_down.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/spinner_arrow_up.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/tabs_close.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/tabs_enabled.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/tabs_leftarrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/tabs_rightarrow.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/tree_arrows.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/tree_checkbox_0.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/tree_checkbox_1.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/tree_checkbox_2.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/tree_dnd_no.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/tree_dnd_yes.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/tree_file.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/tree_folder.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/tree_folder_open.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/tree_loading.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/validatebox_pointer.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/images/validatebox_warning.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/layout.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/linkbutton.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/menu.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/menubutton.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/messager.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/pagination.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/panel.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/spinner.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/splitbutton.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/tabs.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/tree.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/validatebox.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/gray/window.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/icon.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/icons/back.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/icons/cancel.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/icons/cut.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/icons/edit_add.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/icons/edit_remove.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/icons/filesave.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/icons/help.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/icons/no.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/icons/ok.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/icons/pencil.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/icons/print.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/icons/redo.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/icons/reload.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/icons/search.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/themes/icons/undo.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/easyui/validate/easyui_validate.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/errorhandle.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/jquery-1.4.4.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/jquery-ui-1.8.6.custom.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/jquery-ztree-2.5.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/jquery.autocomplete.min.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/main.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/tooltip/Css/Tooltip.css" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/tooltip/Images/Thumbs.db" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/tooltip/Images/accept.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/tooltip/Images/exclamation.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/tooltip/Images/tooltop.gif" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/tooltip/Js/Tooltip.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/tooltip/Js/Tooltip.mini.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/tooltip/Js/Tooltip.pack.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/tooltip/Js/jquery.pack.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/validate/cmxforms.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/validate/jquery.validate.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/validate/messages_cn.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/common/validate/tools.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/headlinemanage.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/login.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/main.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/personinfomanage.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/shopcategorymanage.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/webapp/resources/js/superadmin/shopmanage.js" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/daoTest/ShopDaoTest.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/o2o_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/o2o_war_exploded.xml" />
+    <list default="true" id="24b2d95f-d0bc-4c7a-a832-be789024dd47" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ProductDao.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ProductImgDao.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/ImageHolder.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/ProductCategoryExecution.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/ProductExecution.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/ShopCategoryExecution.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/enums/ProductCategoryStateEnum.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/enums/ShopCategoryStateEnum.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/exception/ProductCategoryOperationException.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ProductService.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/util/CodeUtil.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ProductDao.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ProductImgDao.xml" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/daoTest/ProductCategoryDaoTest.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/daoTest/ProductImgDaoTest.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/o2o.iml" afterPath="$PROJECT_DIR$/o2o.iml" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ShopDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ShopDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ProductCategoryDao.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ProductCategoryDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/enums/ProductStateEnum.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/enums/ProductStateEnum.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ProductCategoryService.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ProductCategoryService.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ShopService.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ShopService.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/serviceImpl/ShopCategoryServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/serviceImpl/ShopCategoryServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/serviceImpl/ProductCategoryServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/serviceImpl/ProductCategoryServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/serviceImpl/ShopServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/serviceImpl/ShopServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/util/ImageUtil.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/util/ImageUtil.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/shopAdminController.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ShopAdminController.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ShopDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ShopDao.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" afterPath="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/html/shop/shopoperation.html" afterPath="$PROJECT_DIR$/src/main/webapp/html/shop/shopoperation.html" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/shopoperation.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/test/BaseTest.java" afterPath="$PROJECT_DIR$/src/test/com/imooc/o2o/test/BaseTest.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/daoTest/ShopCategoryDaoTest.java" afterPath="$PROJECT_DIR$/src/test/daoTest/ShopCategoryDaoTest.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/dao/ShopDao.class" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/dao/ShopDao.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ProductCategoryManagementController.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ProductCategoryManagementController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ShopManagementController.java" afterPath="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ShopManagementController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/ProductCategoryDao.xml" afterPath="$PROJECT_DIR$/src/main/resources/mapper/ProductCategoryDao.xml" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/service/ShopService.class" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/service/ShopService.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/service/serviceImpl/ShopCategoryServiceImpl.class" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/service/serviceImpl/ShopCategoryServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/util/ImageUtil.class" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/util/ImageUtil.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/web/shopadmin/shopAdminController.class" afterPath="$PROJECT_DIR$/target/classes/com/imooc/o2o/web/shopadmin/shopAdminController.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/mapper/ShopDao.xml" afterPath="$PROJECT_DIR$/target/classes/mapper/ShopDao.xml" />
-      <change beforePath="$PROJECT_DIR$/target/classes/spring-mvc.xml" afterPath="$PROJECT_DIR$/target/classes/spring-mvc.xml" />
-      <change beforePath="$PROJECT_DIR$/target/o2o-1.0-SNAPSHOT/WEB-INF/classes/com/imooc/o2o/dao/ShopDao.class" afterPath="$PROJECT_DIR$/target/o2o-1.0-SNAPSHOT/WEB-INF/classes/com/imooc/o2o/dao/ShopDao.class" />
-      <change beforePath="$PROJECT_DIR$/target/o2o-1.0-SNAPSHOT/WEB-INF/classes/com/imooc/o2o/service/ShopService.class" afterPath="$PROJECT_DIR$/target/o2o-1.0-SNAPSHOT/WEB-INF/classes/com/imooc/o2o/service/ShopService.class" />
-      <change beforePath="$PROJECT_DIR$/target/o2o-1.0-SNAPSHOT/WEB-INF/classes/com/imooc/o2o/service/serviceImpl/ShopCategoryServiceImpl.class" afterPath="$PROJECT_DIR$/target/o2o-1.0-SNAPSHOT/WEB-INF/classes/com/imooc/o2o/service/serviceImpl/ShopCategoryServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/target/o2o-1.0-SNAPSHOT/WEB-INF/classes/com/imooc/o2o/util/ImageUtil.class" afterPath="$PROJECT_DIR$/target/o2o-1.0-SNAPSHOT/WEB-INF/classes/com/imooc/o2o/util/ImageUtil.class" />
-      <change beforePath="$PROJECT_DIR$/target/o2o-1.0-SNAPSHOT/WEB-INF/classes/com/imooc/o2o/web/shopadmin/shopAdminController.class" afterPath="$PROJECT_DIR$/target/o2o-1.0-SNAPSHOT/WEB-INF/classes/com/imooc/o2o/web/shopadmin/shopAdminController.class" />
-      <change beforePath="$PROJECT_DIR$/target/o2o-1.0-SNAPSHOT/WEB-INF/classes/mapper/ShopDao.xml" afterPath="$PROJECT_DIR$/target/o2o-1.0-SNAPSHOT/WEB-INF/classes/mapper/ShopDao.xml" />
-      <change beforePath="$PROJECT_DIR$/target/o2o-1.0-SNAPSHOT/WEB-INF/classes/spring-mvc.xml" afterPath="$PROJECT_DIR$/target/o2o-1.0-SNAPSHOT/WEB-INF/classes/spring-mvc.xml" />
-      <change beforePath="$PROJECT_DIR$/target/o2o-1.0-SNAPSHOT/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/o2o-1.0-SNAPSHOT/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/target/o2o-1.0-SNAPSHOT/html/shop/shopoperation.html" afterPath="$PROJECT_DIR$/target/o2o-1.0-SNAPSHOT/html/shop/shopoperation.html" />
-      <change beforePath="$PROJECT_DIR$/target/o2o-1.0-SNAPSHOT/shopoperation.html" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/imooc/o2o/util/ImageUtil.class" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -461,47 +75,115 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="o2o: schema" type="c314c289:MysqlImplModel$Schema" />
       </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="o2o@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="o2o: schema" type="c314c289:MysqlImplModel$Schema" />
+        <item name="tb_product_img: table" type="98d5ac3d:MysqlImplModel$Table" />
+      </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="ProductCategoryManagementController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ProductCategoryManagementController.java">
+      <file leaf-file-name="ShopService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ShopService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="638">
-              <caret line="41" column="28" lean-forward="false" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+            <state relative-caret-position="484">
+              <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShopAdminController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ShopAdminController.java">
+      <file leaf-file-name="ShopServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/serviceImpl/ShopServiceImpl.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+            <state relative-caret-position="132">
+              <caret line="84" column="29" lean-forward="true" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="spring-mvc.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
+      <file leaf-file-name="ShopDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ShopDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+            <state relative-caret-position="88">
+              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ShopManagementController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ProductCategoryDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ProductCategoryDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AreaDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/AreaDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="110">
+              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ShopManagementController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ShopManagementController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="858">
-              <caret line="82" column="71" lean-forward="false" selection-start-line="82" selection-start-column="71" selection-end-line="82" selection-end-column="71" />
+            <state relative-caret-position="876">
+              <caret line="124" column="47" lean-forward="true" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="47" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CodeUtil.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/util/CodeUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageUtil.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/util/ImageUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-286">
+              <caret line="14" column="66" lean-forward="false" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ImageHolder.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/ImageHolder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="9" column="58" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="58" />
+              <folding>
+                <element signature="e#308#309#0" expanded="true" />
+                <element signature="e#340#341#0" expanded="true" />
+                <element signature="e#390#391#0" expanded="true" />
+                <element signature="e#432#433#0" expanded="true" />
+                <element signature="e#469#470#0" expanded="true" />
+                <element signature="e#497#498#0" expanded="true" />
+                <element signature="e#544#545#0" expanded="true" />
+                <element signature="e#578#579#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -513,8 +195,8 @@
       <list>
         <option value="FxmlFile" />
         <option value="HTML File" />
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -529,25 +211,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/entity/Shop.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/entity/PersonInfo.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/entity/Area.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ShopCategoryDao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/serviceImpl/AreaServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ShopCategoryService.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ShopCategoryDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/mybatis-config.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-service.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-dao.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/spring/spring-web.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/applicationContext.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/serviceImpl/ShopCategoryServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/html/shop/wangwei.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/haha.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/webapp/html/shop/shopoperation.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/ShopOperationException.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/util/ImageUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/util/ShopServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
@@ -557,18 +221,10 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c2a435c0-cf65-430d-aefd-a5952fb23a53/console_4.sql" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c2a435c0-cf65-430d-aefd-a5952fb23a53/console_5.sql" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/serviceImpl/ProductCategoryService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ProductCategoryService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/serviceImpl/ProductCategoryServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ProductCategoryDao.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ProductCategoryController.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/Result.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/enums/ProductStateEnum.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/mapper/ProductCategoryDao.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ProductCategoryManagementController.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/resources/js/shop/productcategorymanage.js" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/util/PageCalculator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ShopService.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/serviceImpl/ShopServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/daoTest/ShopCategoryDaoTest.java" />
         <option value="$PROJECT_DIR$/src/test/daoTest/BaseTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/mapper/ShopDao.xml" />
@@ -579,6 +235,32 @@
         <option value="$PROJECT_DIR$/src/main/webapp/html/shop/shopmanage.html" />
         <option value="$PROJECT_DIR$/src/main/resources/spring-mvc.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ShopAdminController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ProductCategoryDao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ProductCategoryDao.xml" />
+        <option value="$APPLICATION_CONFIG_DIR$/consoles/db/c2a435c0-cf65-430d-aefd-a5952fb23a53/console.sql" />
+        <option value="$PROJECT_DIR$/src/test/daoTest/ProductCategoryDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/enums/ProductStateEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/enums/ShopCategoryStateEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/ShopCategoryExecution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/enums/ProductCategoryStateEnum.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/ProductCategoryExecution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ProductCategoryService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/exception/ProductCategoryOperationException.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/serviceImpl/ProductCategoryServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ProductCategoryManagementController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ProductDao.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ProductDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ProductImgDao.java" />
+        <option value="$PROJECT_DIR$/src/test/daoTest/ProductImgDaoTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/mapper/ProductImgDao.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/ProductExecution.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ProductService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ShopService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/serviceImpl/ShopServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/util/ImageUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/ImageHolder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/intercetor/ShopManagementController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/util/CodeUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ShopManagementController.java" />
       </list>
     </option>
@@ -604,9 +286,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="850" />
-    <option name="width" value="1068" />
-    <option name="height" value="1053" />
+    <option name="x" value="758" />
+    <option name="y" value="5" />
+    <option name="width" value="1173" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -624,8 +307,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -666,6 +351,43 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="o2o" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="o2o" type="b2602c69:ProjectViewProjectNode" />
+              <item name="o2o" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="o2o" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="o2o" type="b2602c69:ProjectViewProjectNode" />
+              <item name="o2o" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="o2o" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="serviceImpl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="o2o" type="b2602c69:ProjectViewProjectNode" />
+              <item name="o2o" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="o2o" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="o2o" type="b2602c69:ProjectViewProjectNode" />
+              <item name="o2o" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="o2o" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -682,45 +404,19 @@
               <item name="o2o" type="b2602c69:ProjectViewProjectNode" />
               <item name="o2o" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="o2o" type="b2602c69:ProjectViewProjectNode" />
-              <item name="o2o" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="o2o" type="b2602c69:ProjectViewProjectNode" />
-              <item name="o2o" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="o2o" type="b2602c69:ProjectViewProjectNode" />
-              <item name="o2o" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="html" type="462c0819:PsiDirectoryNode" />
-              <item name="shop" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="o2o" type="b2602c69:ProjectViewProjectNode" />
               <item name="o2o" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="daoTest" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -739,19 +435,19 @@
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/test" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\GitCode\o2o\src\main\java\com\imooc\o2o\util" />
+      <recent name="D:\GitCode\o2o\src\main\java\com\imooc\o2o\intercetor" />
+      <recent name="D:\GitCode\o2o\src\main\java\com\imooc\o2o\dto" />
+      <recent name="D:\GitCode\o2o\src\test\daoTest" />
+      <recent name="D:\GitCode\o2o\src\main\resources\mapper" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\GitCode\o2o\src\test\daoTest" />
       <recent name="D:\GitCode\o2o\src\main\webapp" />
       <recent name="D:\GitCode\o2o\src\main\webapp\WEB-INF" />
       <recent name="D:\GitCode\o2o\src\main\webapp\resources" />
       <recent name="D:\GitCode\o2o\src\main\webapp\WEB-INF\html\shop" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\GitCode\o2o\src\main\webapp\html\shop" />
-      <recent name="D:\GitCode\o2o\src\main\java\com\imooc\o2o\entity" />
-      <recent name="D:\GitCode\o2o\src\test\daoTest" />
-      <recent name="D:\GitCode\o2o\src\main\java\com\imooc\o2o\util" />
-      <recent name="D:\GitCode\o2o\src\main\webapp\resources\js\shop" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -794,6 +490,44 @@
       <option name="PACKAGE_NAME" value="com.imooc.o2o.dao" />
       <option name="MAIN_CLASS_NAME" value="com.imooc.o2o.dao.AreaTest" />
       <option name="METHOD_NAME" value="testQueryArea" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ProductCategoryDaoTest.testAInsertProductCategory" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="o2o" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="daoTest" />
+      <option name="MAIN_CLASS_NAME" value="daoTest.ProductCategoryDaoTest" />
+      <option name="METHOD_NAME" value="testAInsertProductCategory" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration name="ProductImgDaoTest.testABatchInsertProductImg" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="o2o" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="daoTest" />
+      <option name="MAIN_CLASS_NAME" value="daoTest.ProductImgDaoTest" />
+      <option name="METHOD_NAME" value="testABatchInsertProductImg" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -919,15 +653,19 @@
       <option name="PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
     </configuration>
-    <list size="3">
+    <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Unnamed" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.AreaTest.testQueryArea" />
       <item index="2" class="java.lang.String" itemvalue="JUnit.ShopDaoTest.testBQueryShopList" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.ProductCategoryDaoTest.testAInsertProductCategory" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.ProductImgDaoTest.testABatchInsertProductImg" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.ShopDaoTest.testBQueryShopList" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.AreaTest.testQueryArea" />
+      <list size="4">
+        <item index="0" class="java.lang.String" itemvalue="JUnit.ProductImgDaoTest.testABatchInsertProductImg" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.ProductCategoryDaoTest.testAInsertProductCategory" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.ShopDaoTest.testBQueryShopList" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.AreaTest.testQueryArea" />
       </list>
     </recent_temporary>
   </component>
@@ -960,7 +698,10 @@
       <workItem from="1523867917978" duration="2899000" />
       <workItem from="1523883398914" duration="5894000" />
       <workItem from="1523923216477" duration="13300000" />
-      <workItem from="1523953208966" duration="16273000" />
+      <workItem from="1523953208966" duration="17065000" />
+      <workItem from="1524019584227" duration="5010000" />
+      <workItem from="1524035844208" duration="5320000" />
+      <workItem from="1524051585530" duration="11964000" />
     </task>
     <task id="LOCAL-00001" summary="实体类和数据库全部建好了">
       <created>1523460186653</created>
@@ -976,27 +717,34 @@
       <option name="project" value="LOCAL" />
       <updated>1523546221385</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="都可以正常访问前端界面，但是具体到Controller层还是不行">
+      <created>1523975211277</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1523975211277</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="AreaTest_testQueryArea - 2018.04.12 at 20h 04m 57s.xml">
-      <configuration name="AreaTest.testQueryArea" configurationId="JUnit" />
+    <history-entry file="ProductCategoryDaoTest_testAInsertProductCategory - 2018.04.18 at 12h 04m 03s.xml">
+      <configuration name="ProductCategoryDaoTest.testAInsertProductCategory" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="AreaTest_testQueryArea - 2018.04.12 at 20h 09m 15s.xml">
-      <configuration name="AreaTest.testQueryArea" configurationId="JUnit" />
+    <history-entry file="ProductCategoryDaoTest_testAInsertProductCategory - 2018.04.18 at 12h 06m 30s.xml">
+      <configuration name="ProductCategoryDaoTest.testAInsertProductCategory" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShopDaoTest_testBQueryShopList - 2018.04.17 at 18h 37m 22s.xml">
-      <configuration name="ShopDaoTest.testBQueryShopList" configurationId="JUnit" />
+    <history-entry file="ProductCategoryDaoTest_testAInsertProductCategory - 2018.04.18 at 15h 39m 37s.xml">
+      <configuration name="ProductCategoryDaoTest.testAInsertProductCategory" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShopDaoTest_testBQueryShopList - 2018.04.17 at 18h 40m 40s.xml">
-      <configuration name="ShopDaoTest.testBQueryShopList" configurationId="JUnit" />
+    <history-entry file="ProductImgDaoTest_testABatchInsertProductImg - 2018.04.18 at 21h 34m 37s.xml">
+      <configuration name="ProductImgDaoTest.testABatchInsertProductImg" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShopDaoTest_testBQueryShopList - 2018.04.17 at 18h 42m 19s.xml">
-      <configuration name="ShopDaoTest.testBQueryShopList" configurationId="JUnit" />
+    <history-entry file="ProductImgDaoTest_testABatchInsertProductImg - 2018.04.18 at 21h 36m 48s.xml">
+      <configuration name="ProductImgDaoTest.testABatchInsertProductImg" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ShopDaoTest_testBQueryShopList - 2018.04.17 at 18h 43m 11s.xml">
-      <configuration name="ShopDaoTest.testBQueryShopList" configurationId="JUnit" />
+    <history-entry file="ProductImgDaoTest_testABatchInsertProductImg - 2018.04.18 at 21h 37m 14s.xml">
+      <configuration name="ProductImgDaoTest.testABatchInsertProductImg" configurationId="JUnit" />
     </history-entry>
     <history-entry file="ShopDaoTest_testBQueryShopList - 2018.04.17 at 18h 45m 35s.xml">
       <configuration name="ShopDaoTest.testBQueryShopList" configurationId="JUnit" />
@@ -1012,7 +760,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="132893000" />
+    <option name="totallyTimeSpent" value="155979000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -1028,14 +776,14 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32611173" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3249715" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3295325" sideWeight="0.5" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21620172" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2414163" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20708154" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3556867" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1061,7 +809,8 @@
     <MESSAGE value="实体类和数据库全部建好了" />
     <MESSAGE value="一个完整的Area的controller已经实现" />
     <MESSAGE value="重新配置了一遍SSM的配置文件" />
-    <option name="LAST_COMMIT_MESSAGE" value="重新配置了一遍SSM的配置文件" />
+    <MESSAGE value="都可以正常访问前端界面，但是具体到Controller层还是不行" />
+    <option name="LAST_COMMIT_MESSAGE" value="都可以正常访问前端界面，但是具体到Controller层还是不行" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1070,218 +819,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="das://table:/49218829/c2a435c0-cf65-430d-aefd-a5952fb23a53/o2o.tb_user_shop_map">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/49218829/c2a435c0-cf65-430d-aefd-a5952fb23a53/o2o.tb_wechat_auth">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/49218829/c2a435c0-cf65-430d-aefd-a5952fb23a53/o2o.tb_award">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/49218829/c2a435c0-cf65-430d-aefd-a5952fb23a53/o2o.tb_area">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/49218829/c2a435c0-cf65-430d-aefd-a5952fb23a53/o2o.tb_head_line">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/49218829/c2a435c0-cf65-430d-aefd-a5952fb23a53/o2o.tb_local_auth">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/49218829/c2a435c0-cf65-430d-aefd-a5952fb23a53/o2o.tb_person_info">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/49218829/c2a435c0-cf65-430d-aefd-a5952fb23a53/o2o.tb_user_product_map">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/49218829/c2a435c0-cf65-430d-aefd-a5952fb23a53/o2o.tb_user_award_map">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/49218829/c2a435c0-cf65-430d-aefd-a5952fb23a53/o2o.tb_phone_auth">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ShopCategoryDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-125">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <marker date="1523777429821" expanded="true" signature="361:935" ph="SELECT shop_... tb_shop_category" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/49218829/c2a435c0-cf65-430d-aefd-a5952fb23a53/o2o.tb_product_category">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/49218829/c2a435c0-cf65-430d-aefd-a5952fb23a53/o2o.tb_shop">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c2a435c0-cf65-430d-aefd-a5952fb23a53/console_5.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ProductCategoryService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="6" column="17" lean-forward="false" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ProductCategoryDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/Result.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/enums/ProductStateEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2266">
-          <caret line="103" column="35" lean-forward="false" selection-start-line="103" selection-start-column="35" selection-end-line="103" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ProductCategoryDao.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="20" column="23" lean-forward="false" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
-          <folding>
-            <marker date="1523933654425" expanded="true" signature="420:653" ph="SELECT produ... tb_product_category" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/shop/base/common.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/css/shop/productcategorymanage.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/shop/productcategorymanage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="78" column="38" lean-forward="true" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/shop/shopoperation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/html/shop/shopoperation.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ShopDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/imooc/o2o/test/BaseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/daoTest/ShopCategoryDaoTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="484">
-          <caret line="29" column="31" lean-forward="false" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/util/PageCalculator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="198">
           <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1303,7 +844,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="462">
           <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1311,7 +851,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="8" column="2" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1326,41 +865,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-374">
           <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/entity/ShopManagementController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="76" column="5" lean-forward="true" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/entity/ShopManagementController.java" />
     <entry file="file://$PROJECT_DIR$/src/test/daoTest/ShopDaoTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="506">
           <caret line="23" column="11" lean-forward="false" selection-start-line="23" selection-start-column="11" selection-end-line="23" selection-end-column="11" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ShopService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/serviceImpl/ShopServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="139">
-          <caret line="126" column="13" lean-forward="false" selection-start-line="126" selection-start-column="13" selection-end-line="126" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1368,15 +880,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="308">
           <caret line="20" column="5" lean-forward="false" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/serviceImpl/ProductCategoryServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1384,7 +887,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1392,15 +894,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="110">
           <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/html/shop/productcategorymanage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="29" lean-forward="true" selection-start-line="5" selection-start-column="29" selection-end-line="5" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1408,7 +901,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1416,7 +908,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="2" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1424,7 +915,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="682">
           <caret line="31" column="35" lean-forward="false" selection-start-line="31" selection-start-column="35" selection-end-line="31" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1432,39 +922,324 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="286">
           <caret line="13" column="11" lean-forward="true" selection-start-line="13" selection-start-column="11" selection-end-line="13" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="30" column="21" lean-forward="false" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/c2a435c0-cf65-430d-aefd-a5952fb23a53/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="1" column="9" lean-forward="true" selection-start-line="1" selection-start-column="9" selection-end-line="1" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ProductCategoryDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+          <folding>
+            <marker date="1524023038132" expanded="true" signature="420:653" ph="SELECT produ... tb_product_category" />
+            <marker date="1524023038132" expanded="true" signature="807:922" ph="INSERT INTO tb_product_category" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/daoTest/ProductCategoryDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="814">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/ShopCategoryExecution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/ProductCategoryExecution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="21" column="46" lean-forward="false" selection-start-line="21" selection-start-column="46" selection-end-line="21" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/enums/ShopCategoryStateEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="43" lean-forward="false" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/ShopOperationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="7" column="5" lean-forward="true" selection-start-line="4" selection-start-column="4" selection-end-line="7" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/enums/ProductCategoryStateEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="12" lean-forward="false" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/serviceImpl/ProductCategoryServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="858">
+          <caret line="49" column="8" lean-forward="false" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/resources/js/shop/productcategorymanage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="726">
+          <caret line="78" column="38" lean-forward="false" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ProductCategoryManagementController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="638">
-          <caret line="41" column="28" lean-forward="false" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+        <state relative-caret-position="814">
+          <caret line="53" column="41" lean-forward="false" selection-start-line="53" selection-start-column="41" selection-end-line="53" selection-end-column="41" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/spring-mvc.xml">
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/html/shop/productcategorymanage.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="30" column="21" lean-forward="true" selection-start-line="30" selection-start-column="21" selection-end-line="30" selection-end-column="21" />
+        <state relative-caret-position="126">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/AreaDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1523534879365" expanded="true" signature="348:481" ph="SELECT area_... tb_area" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ProductDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="14" lean-forward="false" selection-start-line="10" selection-start-column="14" selection-end-line="10" selection-end-column="14" />
+          <folding>
+            <marker date="1524057519841" expanded="true" signature="541:1028" ph="INSERT INTO tb_product" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/daoTest/ProductImgDaoTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="43" column="11" lean-forward="false" selection-start-line="43" selection-start-column="11" selection-end-line="43" selection-end-column="11" />
+          <folding>
+            <element signature="e#1101#1113#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/enums/ProductStateEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="14" column="27" lean-forward="true" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/ProductExecution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="660">
+          <caret line="30" column="5" lean-forward="true" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/exception/ProductCategoryOperationException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/mapper/ProductImgDao.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="48" lean-forward="true" selection-start-line="17" selection-start-column="48" selection-end-line="17" selection-end-column="48" />
+          <folding>
+            <marker date="1524058605041" expanded="true" signature="437:862" ph="INSERT INTO tb_product_img" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ProductCategoryService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ProductService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="13" column="70" lean-forward="false" selection-start-line="13" selection-start-column="61" selection-end-line="13" selection-end-column="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ShopAdminController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+        <state relative-caret-position="176">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ProductImgDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ShopCategoryDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="9" column="17" lean-forward="false" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ProductDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ProductCategoryDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="15" column="34" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/AreaDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/dao/ShopDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/ShopService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="29" column="23" lean-forward="true" selection-start-line="29" selection-start-column="23" selection-end-line="29" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/service/serviceImpl/ShopServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="132">
+          <caret line="84" column="29" lean-forward="true" selection-start-line="84" selection-start-column="29" selection-end-line="84" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/util/CodeUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/intercetor/ShopManagementController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="160" column="9" lean-forward="true" selection-start-line="160" selection-start-column="9" selection-end-line="160" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/dto/ImageHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="58" lean-forward="false" selection-start-line="9" selection-start-column="41" selection-end-line="9" selection-end-column="58" />
+          <folding>
+            <element signature="e#308#309#0" expanded="true" />
+            <element signature="e#340#341#0" expanded="true" />
+            <element signature="e#390#391#0" expanded="true" />
+            <element signature="e#432#433#0" expanded="true" />
+            <element signature="e#469#470#0" expanded="true" />
+            <element signature="e#497#498#0" expanded="true" />
+            <element signature="e#544#545#0" expanded="true" />
+            <element signature="e#578#579#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/web/shopadmin/ShopManagementController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="858">
-          <caret line="82" column="71" lean-forward="false" selection-start-line="82" selection-start-column="71" selection-end-line="82" selection-end-column="71" />
+        <state relative-caret-position="876">
+          <caret line="124" column="47" lean-forward="true" selection-start-line="124" selection-start-column="47" selection-end-line="124" selection-end-column="47" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/imooc/o2o/util/ImageUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-286">
+          <caret line="14" column="66" lean-forward="false" selection-start-line="14" selection-start-column="66" selection-end-line="14" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

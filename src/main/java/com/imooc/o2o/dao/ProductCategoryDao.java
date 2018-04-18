@@ -12,4 +12,6 @@ public interface ProductCategoryDao {
 
     //通过查询商铺id来查询所有的商品信息
     List<ProductCategory> queryProductCategoryList(Long shopId);
+    //批量插入商品信息的功能
+    int batchInsertProductCategory(List<ProductCategory> productCategoryList);
 }

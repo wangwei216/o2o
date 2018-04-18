@@ -2,6 +2,7 @@ package com.imooc.o2o.service.serviceImpl;
 
 
 import com.imooc.o2o.dao.ShopDao;
+import com.imooc.o2o.dto.ImageHolder;
 import com.imooc.o2o.dto.ShopExecution;
 import com.imooc.o2o.dto.ShopOperationException;
 import com.imooc.o2o.entity.Shop;
@@ -13,9 +14,7 @@ import com.imooc.o2o.util.PageCalculator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
-import java.io.InputStream;
 import java.util.Date;
 import java.util.List;
 
@@ -32,7 +31,7 @@ public class ShopServiceImpl implements ShopService {
 	 * 2.保证事务方法的执行时间尽可能短，不要穿插其他网络操作，RPC/HTTP请求或者剥离到事务方法外部
 	 * 3.不是所有的方法都需要事务，如只有一条修改操作，只读操作不需要事务控制
 	 */
-	public ShopExecution addShop(Shop shop, CommonsMultipartFile shopImg) {
+	public ShopExecution addShop(Shop shop, ImageHolder thumbnail) {
 
 		//判断店铺是否为空
 		if (shop == null)
@@ -49,8 +48,8 @@ public class ShopServiceImpl implements ShopService {
 				throw new RuntimeException("店铺创建失败");
 			} else {
 				try {
-					if (shopImg != null) {
-						addShopImg(shop, shopImg);
+					if (thumbnail.getImage() != null) {
+						addShopImg(shop, thumbnail);
 						effectedNum = shopDao.updateShop(shop);
 						if (effectedNum <= 0) {
 							throw new RuntimeException("创建图片地址失败");
@@ -69,9 +68,9 @@ public class ShopServiceImpl implements ShopService {
 }
 
 
-	private void addShopImg(Shop shop, CommonsMultipartFile shopImg) {
+	private void addShopImg(Shop shop, ImageHolder thumbnail) {
 		String dest = FileUtil.getShopImagePath(shop.getShopId());
-		String shopImgAddr = ImageUtil.generateThumbnail(shopImg, dest);
+		String shopImgAddr = ImageUtil.generateThumbnail(thumbnail, dest);
 		shop.setShopImg(shopImgAddr);
 	}
 	/*通过id得到shop信息*/
@@ -82,7 +81,8 @@ public class ShopServiceImpl implements ShopService {
 	}
 
 	@Override
-	public ShopExecution modifyShop(Shop shop, InputStream shopImgInputStream, String fileName) throws ShopOperationException {
+	@Transactional
+	public ShopExecution modifyShop(Shop shop, ImageHolder  thumbnail) throws ShopOperationException {
 		/*
 		* 1，判断是否需要处理图片
 		* 2，更新店铺信息
@@ -94,7 +94,7 @@ public class ShopServiceImpl implements ShopService {
 			try {
 				//判断图片的文件流是否为空，文件名不为空，且空格不等于空
 				try {
-					if (shopImgInputStream != null && fileName != null && !"".equals(fileName)) {
+					if (thumbnail.getImage() != null && thumbnail.getImageName() != null && !"".equals(thumbnail.getImageName())) {
 						Shop temShop = shopDao.queryByShopId(shop.getShopId());
 						//判断得到的零时shop不为空时，就删除
 						if (temShop.getShopImg() != null) {
@@ -102,7 +102,7 @@ public class ShopServiceImpl implements ShopService {
 							ImageUtil.deleteFileOrPath(temShop.getShopImg());
 						}
 //这个地方有问题
-//					addShopImg(shop,shopImgInputStream,fileName);
+					addShopImg(shop,thumbnail);
 						//这里开始更新店铺信息
 					}
 					shop.setLastEditTime(new Date());
