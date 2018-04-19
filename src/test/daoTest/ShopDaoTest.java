@@ -21,7 +21,6 @@ public class ShopDaoTest extends BaseTest {
 
 
 	@Test
-	@Ignore
 	public void testBQueryShopList() throws Exception {
 		Shop shop = new Shop();
 		List<Shop> shopList = shopDao.queryShopList(shop, 0, 2);

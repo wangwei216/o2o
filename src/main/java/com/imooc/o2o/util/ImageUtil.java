@@ -1,5 +1,20 @@
 package com.imooc.o2o.util;
 
+
+/*
+*设定保存路径
+设定缓冲路径
+设定缓冲大小
+设定文件类型
+获取文件扩展名
+验证文件类型有效性
+表单内容获取：文字以键值对保存在map中。文件保存到保存目录下
+获取上传的文件内容们（返回map给调用者）
+*
+*
+*
+* */
+
 import com.imooc.o2o.dto.ImageHolder;
 import net.coobird.thumbnailator.Thumbnails;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
@@ -10,10 +25,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ImageUtil {
+	//生成缩略图
 	public static String generateThumbnail(ImageHolder thumbnail, String targetAddr) {
+		//生成随机图片的文件名，
 		String realFileName = FileUtil.getRandomFileName();
+		//获得上传文件流的扩展名
+//这里有问题
 		String extension = getFileExtension(thumbnail.getImageName());
 		makeDirPath(targetAddr);
+		//返回绝对路径的拼接的组合名
 		String relativeAddr = targetAddr + realFileName + extension;
 		File dest = new File(FileUtil.getImgBasePath() + relativeAddr);
 		try {
@@ -24,14 +44,14 @@ public class ImageUtil {
 		return relativeAddr;
 	}
 
-	public static String generateNormalImg(CommonsMultipartFile thumbnail, String targetAddr) {
+	public static String generateNormalImg(ImageHolder thumbnail, String targetAddr) {
 		String realFileName = FileUtil.getRandomFileName();
-		String extension = getFileExtension(thumbnail);
+		String extension = getFileExtension(thumbnail.getImageName());
 		makeDirPath(targetAddr);
 		String relativeAddr = targetAddr + realFileName + extension;
 		File dest = new File(FileUtil.getImgBasePath() + relativeAddr);
 		try {
-			Thumbnails.of(thumbnail.getInputStream()).size(337, 640).outputQuality(0.5f).toFile(dest);
+			Thumbnails.of(thumbnail.getImage()).size(337, 640).outputQuality(0.5f).toFile(dest);
 		} catch (IOException e) {
 			throw new RuntimeException("创建缩略图失败：" + e.toString());
 		}
@@ -45,7 +65,7 @@ public class ImageUtil {
 			makeDirPath(targetAddr);
 			for (CommonsMultipartFile img : imgs) {
 				String realFileName = FileUtil.getRandomFileName();
-				String extension = getFileExtension(img);
+				String extension = getFileExtension(img.getName());
 				String relativeAddr = targetAddr + realFileName + count + extension;
 				File dest = new File(FileUtil.getImgBasePath() + relativeAddr);
 				count++;
@@ -60,6 +80,7 @@ public class ImageUtil {
 		return relativeAddrList;
 	}
 
+	//创建一个目标路径文件夹
 	private static void makeDirPath(String targetAddr) {
 		String realFileParentPath = FileUtil.getImgBasePath() + targetAddr;
 		File dirPath = new File(realFileParentPath);
@@ -68,9 +89,15 @@ public class ImageUtil {
 		}
 	}
 
-	private static String getFileExtension(CommonsMultipartFile cFile) {
-		String originalFileName = cFile.getOriginalFilename();
-		return originalFileName.substring(originalFileName.lastIndexOf("."));
+	/*这个是得到输入上传文件流的扩展名*/
+	private static String getFileExtension(String cFile) {
+
+
+		String prefix=cFile.substring(cFile.lastIndexOf(".")+1);
+		return prefix;
+
+		/*String originalFileName = cFile.getOriginalFilename();
+		return originalFileName.substring(originalFileName.lastIndexOf("."));*/
 	}
 
 	/*这个是删除文件*/

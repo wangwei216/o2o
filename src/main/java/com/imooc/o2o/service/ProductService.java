@@ -11,8 +11,10 @@ public interface ProductService {
 
     /*添加商品信息以及对图片的处理*/
     //thumbnail这个是图片的缩略图的属性
-    ProductExecution addProduct(Product product, ImageHolder thumbnail, List<ImageHolder> productImages) throws ProductCategoryOperationException;
+    ProductExecution addProduct(Product product, ImageHolder thumbnail, List<ImageHolder> productImages)
+            throws ProductCategoryOperationException;
 
-    //
+    //添加 也就是缩略图信息
+    ProductExecution addProductImgList(Product product,List<ImageHolder> productImgHolderList);
 
 }
