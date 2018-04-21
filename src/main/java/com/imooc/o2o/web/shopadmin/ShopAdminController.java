@@ -15,18 +15,27 @@ public class ShopAdminController {
         return "/shop/shopoperation";
     }
 
+    //转发到
     @RequestMapping(value = "/productcategorymanage",method = RequestMethod.GET)
     private String productCategoryManagement(){
             return "/shop/productcategorymanage";
     }
-
+    //转发到店铺列表界面
     @RequestMapping("/shoplist")
     private String shopList(){
         return "/shop/shoplist";
     }
 
+    //转发到商品类别管理界面
     @RequestMapping("/shopmanage")
     private String shopManagement(){
         return "/shop/shopmanage";
     }
+
+    //转发到商品添加的页面
+    @RequestMapping("/productoperatrion")
+    private String productOperatrion(){
+        return "shop/productoperation";
+    }
+
 }

@@ -304,12 +304,6 @@ public class ShopManagementController {
 
 
 
-
-
-
-
-
-
 	//把照片的输入流转换为文件流的方法
 	private static void inputStreamToFile(InputStream ins, File  file){
 		OutputStream os= null;

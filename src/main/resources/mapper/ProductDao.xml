@@ -8,6 +8,58 @@
  -->
     <mapper namespace="com.imooc.o2o.dao.ProductDao">
 
+
+
+    <!--这个是先定义好的一个resultMap-->
+    <resultMap id="productMap" type="com.imooc.o2o.entity.Product">
+        <id column="product_id" property="productId" />
+        <result column="product_name" property="productName" />
+        <result column="product_desc" property="productDesc" />
+        <result column="img_addr" property="imgAddr" />
+        <result column="normal_price" property="normalPrice" />
+        <result column="promotion_price" property="promotionPrice" />
+        <result column="priority" property="priority" />
+        <result column="create_time" property="createTime" />
+        <result column="last_edit_time" property="lastEditTime" />
+        <result column="enable_status" property="enableStatus" />
+        <result column="point" property="point" />
+        <association property="productCategory" column="product_category_id"
+                     javaType="com.imooc.o2o.entity.ProductCategory">
+            <id column="product_category_id" property="productCategoryId" />
+            <result column="product_category_name" property="productCategoryName" />
+            <result column="product_category_desc" property="productCategoryDesc" />
+            <result column="priority" property="priority" />
+            <result column="create_time" property="createTime" />
+            <result column="last_edit_time" property="lastEditTime" />
+        </association>
+        <association property="shop" column="shop_id"
+                     javaType="com.imooc.o2o.entity.Shop">
+            <id column="shop_id" property="shopId" />
+            <result column="owner_id" property="ownerId" />
+            <result column="shop_name" property="shopName" />
+            <result column="shop_desc" property="shopDesc" />
+            <result column="shop_addr" property="shopAddr" />
+            <result column="phone" property="phone" />
+            <result column="shop_img" property="shopImg" />
+            <result column="longitude" property="longitude" />
+            <result column="latitude" property="latitude" />
+            <result column="priority" property="priority" />
+            <result column="create_time" property="createTime" />
+            <result column="last_edit_time" property="lastEditTime" />
+            <result column="enable_status" property="enableStatus" />
+            <result column="advice" property="advice" />
+        </association>
+        <collection property="productImgList" column="product_id"
+                    ofType="com.imooc.o2o.entity.ProductImg">
+            <id column="product_img_id" property="productImgId" />
+            <result column="img_addr" property="imgAddr" />
+            <result column="img_desc" property="imgDesc" />
+            <result column="priority" property="priority" />
+            <result column="create_time" property="createTime" />
+            <result column="product_id" property="productId" />
+        </collection>
+    </resultMap>
+
     <!--映射的SQL是Product实体中的插入Product信息的功能-->
         <insert id="insertProduct"
                 parameterType="com.imooc.o2o.entity.Product"
@@ -26,6 +78,71 @@
             )
 
         </insert>
+
+    <!--通过商品id productId来查询唯一的商品信息，返回的是商品类型信息-->
+        <select id="queryProductById" resultMap="productMap" parameterType="Long">
+            SELECT
+            p.product_id,
+            p.product_name,
+            p.product_desc,
+            p.img_addr,
+            p.normal_price,
+            p.promotion_price,
+            p.priority,
+            p.create_time,
+            p.last_edit_time,
+            p.enable_status,
+            p.product_category_id,
+            pm.product_img_id,
+            pm.img_addr AS detail_img,
+            pm.img_desc,
+            pm.priority,
+            pm.create_time
+            FROM
+            tb_product p
+            LEFT JOIN
+            tb_product_img pm ON p.product_id = pm.product_id
+            WHERE
+            p.product_id=#{productId}
+            ORDER BY
+            pm.priority DESC
+
+        </select>
+
+
+    <!--下面这个没有使用主键自增，这个是根据传入的商品实体类去修改商品信息，返回的是int-->
+    <!--  useGeneratedKeys="true" keyProperty="productId"-->
+    <update id="updateProduct" parameterType="com.imooc.o2o.entity.Product">
+
+        UPDATE tb_product
+        <set>
+            <if test="productName != null">product_name=#{productName},</if>
+            <if test="productDesc != null">product_desc=#{productDesc},</if>
+            <if test="imgAddr != null">img_addr=#{imgAddr},</if>
+            <if test="normalPrice != null">normal_price=#{normalPrice},</if>
+            <if test="promotionPrice != null">promotion_price=#{promotionPrice},</if>
+            <if test="priority != null">priority=#{priority},</if>
+            <if test="lastEditTime != null">last_edit_time=#{lastEditTime},</if>
+            <if test="enableStatus != null">enable_status=#{enableStatus},</if>
+            <if test="point != null">point=#{point},</if>
+            <if
+                    test="productCategory != null
+				 and productCategory.productCategoryId != null">
+                product_category_id=#{productCategory.productCategoryId}
+            </if>
+        </set>
+        WHERE product_id = #{productId}
+        AND shop_id=#{shop.shopId}
+    </update>
+
+    <!--通过商品信息的id来去删除商品的详情图片信息-->
+    <delete id="deleteProductImgByProductId">
+        DELETE FROM
+        tb_product_img
+        WHERE
+        product_id=#{productId}
+    </delete>
+
 
 
 

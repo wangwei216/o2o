@@ -1,26 +1,21 @@
 package daoTest;
 
-import com.imooc.o2o.dao.ProductImgDao;
-import com.imooc.o2o.entity.ProductImg;
+import com.imooc.o2o.dao.ProductDao;
 import com.imooc.o2o.test.BaseTest;
 import org.junit.FixMethodOrder;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ProductImgDaoTest extends BaseTest {
 	@Autowired
-	private ProductImgDao productImgDao;
+	private ProductDao productDao;
 
-	@Test
+	/*@Test
+	@Ignore
 	public void testABatchInsertProductImg() throws Exception {
 		ProductImg productImg1 = new ProductImg();
 		productImg1.setImgAddr("图片1");
@@ -36,15 +31,14 @@ public class ProductImgDaoTest extends BaseTest {
 		List<ProductImg> productImgList = new ArrayList<ProductImg>();
 		productImgList.add(productImg1);
 		productImgList.add(productImg2);
-		int effectedNum = productImgDao.batchInsertProductImg(productImgList);
+		int effectedNum = productDao.batchInsertProductImg(productImgList);
 		assertEquals(2, effectedNum);
-	}
+	}*/
 
 	@Test
-	@Ignore
 	public void testCDeleteProductImgByProductId() throws Exception {
-		long productId = 1;
-		int effectedNum = productImgDao.deleteProductImgByProductId(productId);
-		assertEquals(2, effectedNum);
+		long productId = 10;
+		int effectedNum = productDao.deleteProductImgByProductId(productId);
+		assertEquals(3, effectedNum);
 	}
 }

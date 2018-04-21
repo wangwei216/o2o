@@ -50,7 +50,7 @@ public class ProductManagementController {
      *
      *
      * */
-    @RequestMapping(value = "/addproduct", method = RequestMethod.POST)
+    @RequestMapping(value = "/addproduct", method = RequestMethod.GET)
     @ResponseBody
     private Map<String, Object> addProduct(HttpServletRequest request) {
         Map<String, Object> modelMap = new HashMap<String, Object>();
@@ -150,6 +150,6 @@ public class ProductManagementController {
             return modelMap;
         }
 
-    
+
 
 }

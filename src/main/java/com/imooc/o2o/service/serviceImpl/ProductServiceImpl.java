@@ -114,7 +114,7 @@ public class ProductServiceImpl implements ProductService {
     }
 
 
-    /*
+        /*
         * 这个是添加缩略图
         *
         * */
@@ -123,6 +123,38 @@ public class ProductServiceImpl implements ProductService {
             String thumbnailAddr = ImageUtil.generateThumbnail(thumbnail, dest);
             product.setImgAddr(thumbnailAddr);
         }
+
+    // 通过商品id productId来查询唯一的商品信息，返回的是商品类型信息
+    @Override
+    public Product getProductById(long productId) {
+        return productDao.queryProductById(productId);
+    }
+
+
+
+    //根据DAO中的接口传入的商品实体类去修改商品信息，返回的是int，实现的是DAO层修改商品信息updateProduct
+    @Override
+    @Transactional
+    /*
+    * 1、先看缩略图参数是不是有值，有的话则处理缩略图
+    *    如果之前已经有缩略图的话，需要先删除缩略图再添加新图，之后获取缩略图的的相对路径再赋值给product
+    * 2、再看商品详情列表参数是否有值，对商品详情图片列表进行同样的操作
+    * 3、将tb_producdt_img下面原先的商品详情记录全部清除
+    * 4、更新tb_product的信息
+    *
+    *
+    * */
+    public ProductExecution modifyProduct(Product product, ImageHolder thumbnail, List<ImageHolder> productImgList) throws ProductCategoryOperationException {
+            
+
+
+
+            return null;
+    }
+
+
+
+
 
 
 
