@@ -94,7 +94,20 @@ public class ProductServiceImpl implements ProductService {
             productImg.setProductId(product.getProductId());
             //把设置成功的给添加到productImgList商品图片列表中
             productImgList.add(productImg);
-            //到了这里
+
+            //到了这里如果有图片进行添加的话，就开始执行批量添加的操作。也就是判断productImgList列表里面的长度是不是大于0
+            if(productImgList.size()>0){
+                try {
+                    //通过调Dao层的方法去看是否拿到了数据
+                    int effectedNum = productImgDao.batchInsertProductImg(productImgList);
+                    if (effectedNum<=0){
+                        throw  new ProductCategoryOperationException("创建商品信息详情失败");
+                    }
+                }
+                catch (Exception e){
+                    throw new ProductCategoryOperationException("创建商品信息详情失败"+e.toString());
+                }
+            }
 
         }
         return null;
