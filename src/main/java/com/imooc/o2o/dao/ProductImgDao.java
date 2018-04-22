@@ -8,11 +8,12 @@ import java.util.List;
 public interface ProductImgDao {
 
     //这个是查询商品图片信息列表
-    List<ProductImg> queryProductList(long productId);
+    List<ProductImg> queryProductImgList(long productId);
 
     //这个是批量进行插入对商品详情的图片信息
     int batchInsertProductImg(List<ProductImg> productImgList);
 
     //通过商品信息id去删除商品图片信息
     int deleteProductImgByProductId(long productId);
+
 }

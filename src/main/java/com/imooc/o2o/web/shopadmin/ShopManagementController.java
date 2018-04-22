@@ -246,8 +246,8 @@ public class ShopManagementController {
 		 List<Shop> shopList = new ArrayList<Shop>();
 		 try {
 		 	Shop shopCondition = new Shop();
-//这里有问题，本来视频上是这样写的，但是没有setOwner这个方法
-//			shopCondition.setOwner(user);
+/*这里有问题，本来视频上是这样写的，但是没有setOwner这个方法
+			shopCondition.setOwner(user);*/
 		 	ShopExecution se= shopService.getShopList(shopCondition,0,100);
 		 	modelMap.put("shopList",se.getShopList());
 		 	modelMap.put("success",true);

@@ -3,11 +3,8 @@ package daoTest;
 import com.imooc.o2o.dao.ProductDao;
 import com.imooc.o2o.test.BaseTest;
 import org.junit.FixMethodOrder;
-import org.junit.Test;
 import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
-
-import static org.junit.Assert.assertEquals;
 
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class ProductImgDaoTest extends BaseTest {
@@ -35,10 +32,14 @@ public class ProductImgDaoTest extends BaseTest {
 		assertEquals(2, effectedNum);
 	}*/
 
+
+/*
 	@Test
+	@Ignore
 	public void testCDeleteProductImgByProductId() throws Exception {
 		long productId = 10;
 		int effectedNum = productDao.deleteProductImgByProductId(productId);
 		assertEquals(3, effectedNum);
-	}
+	}*/
+
 }

@@ -13,6 +13,7 @@ import com.imooc.o2o.util.FileUtil;
 import com.imooc.o2o.util.ImageUtil;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import javax.annotation.Resource;
 import java.util.ArrayList;
@@ -26,6 +27,9 @@ public class ProductServiceImpl implements ProductService {
     private  ProductDao productDao;
     @Resource
     private ProductImgDao productImgDao;
+    private Product product;
+    private CommonsMultipartFile thumbnail;
+    private List<ImageHolder> productImgHolderList;
 
     //后面的参数是一个列表问题
     /*
@@ -127,14 +131,24 @@ public class ProductServiceImpl implements ProductService {
     // 通过商品id productId来查询唯一的商品信息，返回的是商品类型信息
     @Override
     public Product getProductById(long productId) {
-        return productDao.queryProductById(productId);
+        return productDao.queryProductByProductId(productId);
     }
 
 
+    /*
+    * 删除某个商品下所有的详情图片
+    * */
+
+    private void deleteProductImgList(long productId) {
+        List<ProductImg> productImgList = productImgDao.queryProductImgList(productId);
+        for (ProductImg productImg : productImgList) {
+            FileUtil.deleteFile(productImg.getImgAddr());
+        }
+        productImgDao.deleteProductImgByProductId(productId);
+    }
 
     //根据DAO中的接口传入的商品实体类去修改商品信息，返回的是int，实现的是DAO层修改商品信息updateProduct
-    @Override
-    @Transactional
+
     /*
     * 1、先看缩略图参数是不是有值，有的话则处理缩略图
     *    如果之前已经有缩略图的话，需要先删除缩略图再添加新图，之后获取缩略图的的相对路径再赋值给product
@@ -144,12 +158,47 @@ public class ProductServiceImpl implements ProductService {
     *
     *
     * */
-    public ProductExecution modifyProduct(Product product, ImageHolder thumbnail, List<ImageHolder> productImgList) throws ProductCategoryOperationException {
-            
+    @Override
+    @Transactional
+    public ProductExecution modifyProduct(Product product, ImageHolder thumbnail, List<ImageHolder> productImgHolderList) throws ProductCategoryOperationException {
+
+        //先进行空值
+        if(product!=null && product.getShop()!=null && product.getShop().getShopId()!=null){
+            product.setLastEditTime(new Date());
+            if(thumbnail!=null){
+                //先获取原有的缩略图信息
+                Product tempProduct = productDao.queryProductByProductId(product.getProductId());
+                //从获取到的当前商品信息中判断是不是可能获取到图片地址
+                if (tempProduct.getImgAddr()!=null){
+                    ImageUtil.deleteFileOrPath(tempProduct.getImgAddr());
+                }
+                //调用添加缩略图的方法
+                addThumbnail(product,thumbnail);
+            }
+            //再去判断有没有新存入的商品详情图列表，如果有的话就先删除原来的，再去添新的
+            if (productImgHolderList!=null && productImgHolderList.size()>0){
+
+                deleteProductImgList(product.getProductId());
+                addProductImgList(product,productImgHolderList);
+            }
+            try {
+                //更新商品信息
+                int effectedNum = productDao.updateProduct(product);
+                if (effectedNum<0)
+                {
+                    throw new ProductCategoryOperationException("更新商品信息失败");
+                }
+                return new ProductExecution(ProductStateEnum.SUCCESS,product);
+             }
+             catch (Exception e){
+                throw new ProductCategoryOperationException("更新商品信息失败"+e.toString());
+             }
+        }
+        else {
+                return   new ProductExecution(ProductStateEnum.EMPTY);
+        }
 
 
-
-            return null;
     }
 
 
