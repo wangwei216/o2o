@@ -15,7 +15,7 @@ public class ShopAdminController {
         return "/shop/shopoperation";
     }
 
-    //转发到
+    //转发到商品类别管理界面
     @RequestMapping(value = "/productcategorymanage",method = RequestMethod.GET)
     private String productCategoryManagement(){
             return "/shop/productcategorymanage";
@@ -26,7 +26,7 @@ public class ShopAdminController {
         return "/shop/shoplist";
     }
 
-    //转发到商品类别管理界面
+    //转发到店铺类别管理界面
     @RequestMapping("/shopmanage")
     private String shopManagement(){
         return "/shop/shopmanage";
@@ -36,6 +36,12 @@ public class ShopAdminController {
     @RequestMapping("/productoperatrion")
     private String productOperatrion(){
         return "shop/productoperation";
+    }
+
+    //转发值商品管理页面
+    @RequestMapping("/productmanage")
+    private String productManagement(){
+        return "shop/productmanage";
     }
 
 }

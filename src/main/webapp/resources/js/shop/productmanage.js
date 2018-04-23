@@ -1,8 +1,8 @@
 $(function() {
-	var shopId = 1;
-	var listUrl = '/myo2o/shop/listproductsbyshop?pageIndex=1&pageSize=9999&shopId='
+	var shopId = 8;//这个到时候需要在进行改变
+	var listUrl = '/o2o/shop/listproductsbyshop?pageIndex=1&pageSize=9999&shopId='
 			+ shopId;
-	var deleteUrl = '/myo2o/shop/modifyproduct';
+	var deleteUrl = '/o2o/shopadmin	/modifyproduct';
 
 	function getList() {
 		$.getJSON(listUrl, function(data) {
@@ -19,13 +19,13 @@ $(function() {
 						contraryStatus = 0;
 					}
 					tempHtml += '' + '<div class="row row-product">'
-							+ '<div class="col-30">'
+							+ '<div class="col-33">'
 							+ item.productName
 							+ '</div>'
 							+ '<div class="col-20">'
 							+ item.priority
 							+ '</div>'
-							+ '<div class="col-50">'
+							+ '<div class="col-40">'
 							+ '<a href="#" class="edit" data-id="'
 							+ item.productId
 							+ '" data-status="'
@@ -85,18 +85,18 @@ $(function() {
 					function(e) {
 						var target = $(e.currentTarget);
 						if (target.hasClass('edit')) {
-							window.location.href = '/myo2o/shop/productedit?productId='
+							window.location.href = '/o2o/shopadmin/productedit?productId='
 									+ e.currentTarget.dataset.id;
 						} else if (target.hasClass('delete')) {
 							deleteItem(e.currentTarget.dataset.id,
 									e.currentTarget.dataset.status);
 						} else if (target.hasClass('preview')) {
-							window.location.href = '/myo2o/frontend/productdetail?productId='
+							window.location.href = '/o2o/frontend/productdetail?productId='
 									+ e.currentTarget.dataset.id;
 						}
 					});
 
 	$('#new').click(function() {
-		window.location.href = '/myo2o/shop/productedit';
+		window.location.href = '/o2o/shopadmin/productedit';
 	});
 });

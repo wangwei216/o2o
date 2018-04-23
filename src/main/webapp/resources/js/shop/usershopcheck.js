@@ -3,7 +3,7 @@ $(function() {
     var userName = '';
 
     function getList() {
-        var listUrl = '/myo2o/shop/listusershopmapsbyshop?pageIndex=1&pageSize=9999&shopId=' + shopId + '&userName=' + userName;
+        var listUrl = '/o2o/shop/listusershopmapsbyshop?pageIndex=1&pageSize=9999&shopId=' + shopId + '&userName=' + userName;
         $.getJSON(listUrl, function (data) {
             if (data.success) {
                 var userShopMapList = data.userShopMapList;

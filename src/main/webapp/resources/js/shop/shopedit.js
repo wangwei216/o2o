@@ -4,12 +4,12 @@ $(function() {
 
 	var isEdit = shopId ? true : false;
 
-	var shopInfoUrl = '/myo2o/shop/getshopbyid?shopId=1';
+	var shopInfoUrl = '/o2o/shop/getshopbyid?shopId=1';
 	// var shopInfoUrl = '/myo2o/shop/getshopbyid?shopId=' + shopId;
-	var initUrl = '/myo2o/shop/getshopinitinfo';
-	var editShopUrl = '/myo2o/shop/registershop';
+	var initUrl = '/o2o/shop/getshopinitinfo';
+	var editShopUrl = '/o2o/shop/registershop';
 	if (isEdit) {
-		editShopUrl = '/myo2o/shop/modifyshop';
+		editShopUrl = '/o2o/shop/modifyshop';
 	}
 
 	function getInfo(shopId) {

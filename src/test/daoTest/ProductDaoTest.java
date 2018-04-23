@@ -77,13 +77,14 @@ public class ProductDaoTest extends BaseTest {
 		effectedNum = productDao.insertProduct(product3);
 		assertEquals(1, effectedNum);
 	}
-/*
 
 	@Test
 	public void testBQueryProductList() throws Exception {
 		Product product = new Product();
+		//分页查询，虞姬返回3条结果
 		List<Product> productList = productDao.queryProductList(product, 0, 3);
 		assertEquals(3, productList.size());
+		//查询商品总数
 		int count = productDao.queryProductCount(product);
 		assertEquals(4, count);
 		product.setProductName("测试");
@@ -99,7 +100,6 @@ public class ProductDaoTest extends BaseTest {
 		count = productDao.queryProductCount(product);
 		assertEquals(1, count);
 	}
-*/
 
 	@Test
 	@Ignore

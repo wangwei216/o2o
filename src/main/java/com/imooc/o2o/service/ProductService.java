@@ -28,8 +28,12 @@ public interface ProductService {
                                    List<ImageHolder> productImgHolderList)
             throws ProductCategoryOperationException;
 
-
-
+    /*
+    * 查询商品列表，并分页实现，可以输入的条件是商品名、商品状态、店铺ID、商品类别
+    * 这个service的返回结果都是事先已经定义好的状态返回结过的枚举
+    * pageIndex 这个参数表示那一页的下标，pageSize 一页多少条数据
+    * */
+    ProductExecution getProductList(Product productCondition,int pageIndex,int pageSize);
 
 
 

@@ -1,6 +1,7 @@
 package com.imooc.o2o.util;
 
 public class PageCalculator {
+
 	public static int calculatePageCount(int totalCount, int pageSize) {
 		int idealPage = totalCount / pageSize;
 		int totalPage = (totalCount % pageSize == 0) ? idealPage
@@ -8,6 +9,7 @@ public class PageCalculator {
 		return totalPage;
 	}
 
+	//返回的是每次查询的起始位置
 	public static int calculateRowIndex(int pageIndex, int pageSize) {
 		return (pageIndex > 0) ? (pageIndex - 1) * pageSize : 0;
 	}

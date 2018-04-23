@@ -269,6 +269,66 @@ public class ProductManagementController {
         }
 
 
+        /*
+        * 通过店铺的id来获取该店铺下的商品列表：
+        *
+        *   1.其实就是先从前台获取到你service层需要用到的参数或者从当前客户端的request、session中获取你需要的数据
+        *   2.然后对你拿到的数据进行各种逻辑判断
+        *
+        * */
+        @RequestMapping(value = "/getproductlistbyshop",method = RequestMethod.GET)
+        @ResponseBody
+        private Map<String,Object> getProductListByShop(HttpServletRequest request){
+            //还是吸纳定义一个modelMap集合来进行保存数据
+            Map<String,Object> modelMap = new HashMap<String, Object>();
+            //因为你调用Service层中getProductList的方法时，你需要先要从前台获取到你需要传进来的参数pageIndex，pageSize
+            int pageIndex = HttpServletRequestUtil.getInt(request, "pageIndex");
+            int pageSize = HttpServletRequestUtil.getInt(request, "pageSize");
+            //然后需要从当前请求过来的session中再去获取你需要的店铺信息，也就是获取shopId，这个currentShop一般是从前台传进来的
+            Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
+                //队拿到的数据进行判断
+                if ((pageIndex> -1)&&(pageSize> -1)&&(currentShop!=null) && (currentShop.getShopId()!=null)){
+                    //这个是获取传入的时候需要检索的条件，可以从某个商品类别查找商品名去筛选这个店铺下的商品列表信息
+                    long prodcutCategoryId = HttpServletRequestUtil.getLong(request, "productCategoryId");
+                    String productName = HttpServletRequestUtil.getString(request, "productName");
+                    Product productCondition = compactProductCondition(currentShop.getShopId(), prodcutCategoryId, productName);
+                    //然后传入查询条件及分页信息，返回相应列表的总数,也就是直接利用上面从前端得到的参数
+                    ProductExecution pe= productService.getProductList(productCondition,pageIndex,pageSize);
+                    modelMap.put("productList",pe.getProductList());
+                    modelMap.put("count",pe.getCount());
+                    modelMap.put("success", true);
+                }
+                else {
+                    modelMap.put("success",false);
+                    modelMap.put("errMsg","pageIndex or pageSize or shopId is NULL");
+                }
+                return modelMap;
+
+        }
+
+        /*
+        *
+        * 这个是一个封装的方法：就是封装了商品的查询条件到Product实例中
+        * */
+        private Product compactProductCondition(long shopId,long prodcutCategoryId,String productName){
+            Product productCondition = new Product();
+            Shop shop = new Shop();
+            //把传进来的shopId设置到shop中
+            shop.setShopId(shopId);
+            productCondition.setShop(shop);
+            //看是不是还有其他的要设置类别的要求，有 话就就set进去
+            if (prodcutCategoryId !=-1L){
+
+                ProductCategory productCategory = new ProductCategory();
+                productCategory.setProductCategoryId(prodcutCategoryId);
+                //把整个ProductCategory实体直接给set到Product中去
+                productCondition.setProductCategory(productCategory);
+            }
+            if (productName!=null){
+                productCondition.setProductName(productName);
+            }
+                return productCondition;
+        }
 
 
 }

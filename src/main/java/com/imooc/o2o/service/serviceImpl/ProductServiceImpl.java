@@ -11,6 +11,7 @@ import com.imooc.o2o.exception.ProductCategoryOperationException;
 import com.imooc.o2o.service.ProductService;
 import com.imooc.o2o.util.FileUtil;
 import com.imooc.o2o.util.ImageUtil;
+import com.imooc.o2o.util.PageCalculator;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
@@ -201,12 +202,23 @@ public class ProductServiceImpl implements ProductService {
 
     }
 
-
-
-
-
-
-
+    /*
+    * 从DAO层查询商品列表，并分页实现，可以输入的条件是商品名、商品状态、店铺ID、商品类别处理得到的数据
+    * */
+    @Override
+    public ProductExecution getProductList(Product productCondition, int pageIndex, int pageSize) {
+        //需要先把页码转化为数据库的行码，调用DAO取回，
+        int rowIndex = PageCalculator.calculateRowIndex(pageIndex,pageSize);
+        //rowIndex查询的起始位置，pageSize表示一页规定显示多少条数据
+        List<Product> productList = productDao.queryProductList(productCondition, rowIndex, pageSize);
+        //再去查询一共有多少条数据，就能实现分页了
+        int count = productDao.queryProductCount(productCondition);
+        //创建一个返回的ProductExecution对象，然后把查询到的商品信息列表set进去，还有查询的总数
+        ProductExecution pe= new ProductExecution();
+        pe.setProductList(productList);
+        pe.setCount(count);
+        return pe;
+    }
 
 
 }
