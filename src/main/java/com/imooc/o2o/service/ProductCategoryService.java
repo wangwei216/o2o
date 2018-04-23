@@ -11,4 +11,6 @@ public interface ProductCategoryService {
 
     //这个是批量插入店铺商品的信息的接口
     ProductCategoryExecution batchInsertProductCategory(List<ProductCategory> productCategoryList) throws Exception;
+
+    ProductCategoryExecution deleteProductCategory(long productCategoryId, long shopId);
 }

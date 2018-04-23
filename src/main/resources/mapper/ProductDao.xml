@@ -213,5 +213,18 @@
     </select>
 
 
+    <!--这个是删除商品类别之前，需要先讲商品类别的id置为空
+    keyProperty="product_id" useGeneratedKeys="true"
+    -->
+    <update id="updateProductCategoryToNull" parameterType="Long">
+
+        UPDATE tb_product
+        SET
+        product_category_id = null
+        WHERE product_category_id =
+        #{productCategoryId}
+    </update>
+
+
 </mapper>
 
