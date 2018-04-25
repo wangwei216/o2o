@@ -1,7 +1,8 @@
-package com.imooc.myo2o.dao;
+package daoTest;
 
 import com.imooc.o2o.dao.ShopCategoryDao;
 import com.imooc.o2o.entity.ShopCategory;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 
@@ -17,6 +18,7 @@ public class ShopCategoryDaoTest extends com.imooc.o2o.test.BaseTest {
 
 
 	@Test
+	@Ignore
 	public void testBQueryShopCategory() throws Exception {
 		ShopCategory sc = new ShopCategory();
 		List<ShopCategory> shopCategoryList = shopCategoryDao
@@ -29,6 +31,15 @@ public class ShopCategoryDaoTest extends com.imooc.o2o.test.BaseTest {
 		sc.setShopCategoryId(0L);
 		shopCategoryList = shopCategoryDao.queryShopCategory(sc);
 		assertEquals(2, shopCategoryList.size());
+
+	}
+
+	/*这个测试的是*/
+	@Test
+	public void testQueryShopCategory(){
+
+		List<ShopCategory> shopCategoryList = shopCategoryDao.queryShopCategory(null);
+		System.out.println(shopCategoryList.size());
 
 	}
 

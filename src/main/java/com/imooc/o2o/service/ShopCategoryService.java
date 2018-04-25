@@ -8,5 +8,8 @@ import java.util.List;
 @Service
 public interface ShopCategoryService {
 
+    /*这个是得到ShopCategory的列表*/
     List<ShopCategory> getShopCategoryList(ShopCategory shopCategoryCondition);
+
+
 }

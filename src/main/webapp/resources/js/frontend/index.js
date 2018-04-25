@@ -1,10 +1,13 @@
 $(function() {
-    var url = '/myo2o/frontend/listmainpageinfo';
+    //定义访问后台，获取头条列表及一级列表的url
+    var url = '/o2o/frontend/listmainpageinfo';
 
+    //访问后台，获取头条列表及一级列表
     $.getJSON(url, function (data) {
         if (data.success) {
             var headLineList = data.headLineList;
             var swiperHtml = '';
+            //遍历头条列表，拼接出轮播组图
             headLineList.map(function (item, index) {
                 swiperHtml += ''
                             + '<div class="swiper-slide img-wrap">'
@@ -34,13 +37,23 @@ $(function() {
         }
     });
 
+
+    /*
+    *
+    *
+    * 中间少了一部分
+    *
+    *
+    *
+    * */
+
     $('#me').click(function () {
         $.openPanel('#panel-left-demo');
     });
 
     $('.row').on('click', '.shop-classify', function (e) {
         var shopCategoryId = e.currentTarget.dataset.category;
-        var newUrl = '/myo2o/frontend/shoplist?parentId=' + shopCategoryId;
+        var newUrl = '/o2o/frontend/shoplist?parentId=' + shopCategoryId;
         window.location.href = newUrl;
     });
 

@@ -2,8 +2,9 @@ $(function() {
 	var loading = false;
 	var maxItems = 999;
 	var pageSize = 10;
-	var listUrl = '/myo2o/frontend/listshops';
-	var searchDivUrl = '/myo2o/frontend/listshopspageinfo';
+	//获取店铺列表以及区域列表的url
+	var listUrl = '/o2o/frontend/listshops';
+	var searchDivUrl = '/o2o/frontend/listshopspageinfo';
 	var pageNum = 1;
 	var parentId = getQueryString('parentId');
 	var areaId = '';
@@ -86,18 +87,19 @@ $(function() {
 	}
 	// 预先加载20条
 	addItems(pageSize, pageNum);
-
+	//下滑屏幕自动进行分页搜索
 	$(document).on('infinite', '.infinite-scroll-bottom', function() {
 		if (loading)
 			return;
 		addItems(pageSize, pageNum);
 	});
 
+	//这个是点击店铺的卡片进入该店铺的详情页
 	$('.shop-list').on('click', '.card', function(e) {
 		var shopId = e.currentTarget.dataset.shopId;
-		window.location.href = '/myo2o/frontend/shopdetail?shopId=' + shopId;
+		window.location.href = '/o2o/frontend/shopdetail?shopId=' + shopId;
 	});
-
+	//选择新的店铺类别之后，重置页码，清空原先的店铺列表，按照新的类别进行分类查询
 	$('#shoplist-search-div').on(
 			'click',
 			'.button',
@@ -123,6 +125,7 @@ $(function() {
 						$(e.target).addClass('button-fill').siblings()
 								.removeClass('button-fill');
 					}
+					//由于查询条件改变，清空店铺列表在进行查询
 					$('.list-div').empty();
 					pageNum = 1;
 					addItems(pageSize, pageNum);
@@ -137,7 +140,7 @@ $(function() {
 		pageNum = 1;
 		addItems(pageSize, pageNum);
 	});
-
+	//区域信息发生改变后，重置页码，清空原先的店铺列表，按照新的区域去查询
 	$('#area-search').on('change', function() {
 		areaId = $('#area-search').val();
 		$('.list-div').empty();

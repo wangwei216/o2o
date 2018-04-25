@@ -153,15 +153,22 @@
         tb_shop s ,
         tb_area a,
         tb_shop_category sc
+
         <where>
             <if test="shopCondition.shopId!=null">
                 and s.shop_id = #{shopCondition.shopId}
             </if>
-       <!--     <if test="shopCondition.shopCategory!=null
+            <if test="shopCondition.shopCategory!=null
 				 and shopCondition.shopCategory.shopCategoryId!=null">
                 and sc.shop_category_id =
                 #{shopCondition.shopCategory.shopCategoryId}
-            </if>-->
+            </if>
+            <!--这个是新家的-->
+            <if test="shopCondition.shopCategory!=null
+				 and shopCondition.shopCategory.parent!=null and shopCondition.shopCategory.parent.shopCategoryId!=null">
+                AND s.shop_category_id in (SELECT shop_category_id FROM tb_shop_category
+                WHERE parent_id=#{shopCondition.shopCategory.parent.shopCategoryId})
+            </if>
 
             <if test="shopCondition.area!=null
 				 and shopCondition.area.areaId!=null">
@@ -209,6 +216,13 @@
 				 and shopCondition.shopCategory.shopCategoryId!=null">
                 and sc.shop_category_id =
                 #{shopCondition.shopCategory.shopCategoryId}
+            </if>
+
+            <!--这个是新家的-->
+            <if test="shopCondition.shopCategory!=null
+				 and shopCondition.shopCategory.parent!=null and shopCondition.shopCategory.parent.shopCategoryId!=null">
+                AND s.shop_category_id in (SELECT shop_category_id FROM tb_shop_category
+                WHERE parent_id=#{shopCondition.shopCategory.parent.shopCategoryId})
             </if>
 
             <if test="shopCondition.area!=null
