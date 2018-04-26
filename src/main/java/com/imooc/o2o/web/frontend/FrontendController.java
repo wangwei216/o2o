@@ -32,4 +32,11 @@ public class FrontendController {
         private String showShopDetail(){
             return "/frontend/shopdetail";
         }
+        /*
+        * 这个是商品信息的详情页的路由
+        * */
+    @RequestMapping(value = "/productdetail", method = RequestMethod.GET)
+    private String showProductDetail() {
+        return "frontend/productdetail";
+    }
 }
