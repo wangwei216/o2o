@@ -1,18 +1,21 @@
 $(function() {
 	var loading = false;
 	var maxItems = 20;
-	var pageSize = 10;
+	var pageSize = 3;
 
-	var listUrl = '/myo2o/frontend/listproductsbyshop';
+	var listUrl = '/o2o/frontend/listproductsbyshop';
 
 	var pageNum = 1;
 	var shopId = getQueryString('shopId');
 	var productCategoryId = '';
 	var productName = '';
 
-	var searchDivUrl = '/myo2o/frontend/listshopdetailpageinfo?shopId='
+	var searchDivUrl = '/o2o/frontend/listshopdetailpageinfo?shopId='
 			+ shopId;
-
+	//渲染出店铺的基本信息以及商品列表
+	getSearchDivData();
+	//预先加载店铺的10条信息
+	addItems(pageSize,pageNum);
 	function getSearchDivData() {
 		var url = searchDivUrl;
 		$
@@ -89,14 +92,15 @@ $(function() {
 		});
 	}
 
-	addItems(pageSize, pageNum);
-
+	// addItems(pageSize, pageNum);
+	//下滑屏幕自动进行分页搜索
 	$(document).on('infinite', '.infinite-scroll-bottom', function() {
 		if (loading)
 			return;
 		addItems(pageSize, pageNum);
 	});
 
+	//选择新的商品类别后，重置页码，清空原先的商品列表，重新按照新的类别去查询
 	$('#shopdetail-button-div').on(
 			'click',
 			'.button',
@@ -116,16 +120,17 @@ $(function() {
 				}
 			});
 
+	//点击卡片进入该商品下的详情页
 	$('.list-div')
 			.on(
 					'click',
 					'.card',
 					function(e) {
 						var productId = e.currentTarget.dataset.productId;
-						window.location.href = '/myo2o/frontend/productdetail?productId='
+						window.location.href = '/o2o/frontend/productdetail?productId='
 								+ productId;
 					});
-
+	//需要查询的商品名字发生变化后，重置页码，清空原先的商品列表，重新进行查询
 	$('#search').on('input', function(e) {
 		productName = e.target.value;
 		$('.list-div').empty();
@@ -133,6 +138,7 @@ $(function() {
 		addItems(pageSize, pageNum);
 	});
 
+	//点击打卡侧栏
 	$('#me').click(function() {
 		$.openPanel('#panel-left-demo');
 	});

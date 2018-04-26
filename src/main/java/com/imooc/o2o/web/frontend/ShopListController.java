@@ -147,4 +147,8 @@ public class ShopListController {
 		shopCondition.setEnableStatus(1);
 		return shopCondition;
 	}
+
+
+
+
 }
