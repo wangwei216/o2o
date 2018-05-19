@@ -37,7 +37,7 @@ public class ShopListController {
 	@ResponseBody
 	private Map<String, Object> listShopsPageInfo(HttpServletRequest request) {
 		Map<String, Object> modelMap = new HashMap<String, Object>();
-		long parentId = HttpServletRequestUtil.getLong(request, "parentId");
+		int parentId = HttpServletRequestUtil.getInt(request, "parentId");
 		List<ShopCategory> shopCategoryList = null;
 		if (parentId != -1) {
 			try {
@@ -94,10 +94,10 @@ public class ShopListController {
 		int pageSize = HttpServletRequestUtil.getInt(request, "pageSize");
 		//对拿到 的值进行判断
 		if ((pageIndex > -1) && (pageSize > -1)) {
-			long parentId = HttpServletRequestUtil.getLong(request, "parentId");			
-			long shopCategoryId = HttpServletRequestUtil.getLong(request,
+			int parentId =  HttpServletRequestUtil.getInt(request, "parentId");
+			int shopCategoryId = HttpServletRequestUtil.getInt(request,
 					"shopCategoryId");
-			long areaId = HttpServletRequestUtil.getLong(request, "areaId");
+			int areaId = HttpServletRequestUtil.getInt(request, "areaId");
 			String shopName = HttpServletRequestUtil.getString(request,
 					"shopName");
 			Shop shopCondition = compactShopCondition4Search(parentId,
@@ -117,7 +117,7 @@ public class ShopListController {
 	/*
 	* 这个是获取组合之后的查询条件
 	* */
-	private Shop compactShopCondition4Search(long parentId, long shopCategoryId, long areaId, String shopName) {
+	private Shop compactShopCondition4Search(int parentId, int shopCategoryId, int areaId, String shopName) {
 		Shop shopCondition = new Shop();
 		//这个是查询某个一级ShopCategory 下面的所有二级shopCategory里面的店铺列表(一级就相当于是一个大的分类，二级就相当于是这个分类下对应的店铺)
 		if (parentId != -1L) {

@@ -3,18 +3,18 @@ package com.imooc.o2o.entity;
 import java.util.Date;
 
 public class Area {
-	private Long areaId;
+	private int areaId;
 	private String areaName;
 	private String areaDesc;
 	private Integer priority;
 	private Date createTime;
 	private Date lastEditTime;
 
-	public Long getAreaId() {
+	public int getAreaId() {
 		return areaId;
 	}
 
-	public void setAreaId(Long areaId) {
+	public void setAreaId(int areaId) {
 		this.areaId = areaId;
 	}
 

@@ -69,12 +69,25 @@
 
 
     <!--keyProperty这个是跟shop实体属性保持一致的那个-->
-    <insert id="insertShop" useGeneratedKeys="true" keyColumn="shop_id" keyProperty="shopId">
+    <insert id="insertShop" parameterType="com.imooc.o2o.entity.Shop">
         INSERT INTO
-        tb_shop(owner_id, area_id, shop_category_id, parent_category_id, shop_name, shop_desc, shop_addr,
-                phone, shop_img, priority, create_time, last_edit_time, advice)
+        tb_shop(
+        owner_id,
+        area_id,
+        shop_category_id,
+
+        shop_name,
+        shop_desc,
+        shop_addr,
+        phone,
+        shop_img,
+        priority,
+        create_time,
+        last_edit_time,
+        enable_status,
+        advice)
         VALUES
-        (#{owner.userId},#{area.areaId},#{shopCategory.shopCategoryId},#{shopName},
+        (#{ownerId},#{area.areaId},#{shopCategory.shopCategoryId},#{shopName},
         #{shopDesc},#{shopAddr},#{phone},#{shopImg},#{priority},#{createTime}
         ,#{lastEditTime},#{enableStatus},#{advice})
 

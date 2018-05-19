@@ -25,6 +25,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ImageUtil {
+
+	//把这个基本的哪个盘的路径给定义下来 这个可以先不用
+//	private static String basePath=Thread.currentThread().getContextClassLoader().getResource("").getPath();
+
 	//生成缩略图
 	public static String generateThumbnail(ImageHolder thumbnail, String targetAddr) {
 		//生成随机图片的文件名，
@@ -45,6 +49,7 @@ public class ImageUtil {
 	}
 
 	public static String generateNormalImg(ImageHolder thumbnail, String targetAddr) {
+		//这个是生成图片的随机名
 		String realFileName = FileUtil.getRandomFileName();
 		String extension = getFileExtension(thumbnail.getImageName());
 		makeDirPath(targetAddr);

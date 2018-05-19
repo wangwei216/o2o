@@ -4,20 +4,20 @@ import java.util.Date;
 
 public class ShopCategory {
 
-	private Long shopCategoryId;
+	private int shopCategoryId;
 	private String shopCategoryName;
 	private String shopCategoryDesc;
 	private String shopCategoryImg;
 	private Integer priority;
 	private Date createTime;
 	private Date lastEditTime;
-	private Long parentId;
+	private int parentId;
 
-	public Long getShopCategoryId() {
+	public int getShopCategoryId() {
 		return shopCategoryId;
 	}
 
-	public void setShopCategoryId(Long shopCategoryId) {
+	public void setShopCategoryId(int shopCategoryId) {
 		this.shopCategoryId = shopCategoryId;
 	}
 
@@ -69,11 +69,11 @@ public class ShopCategory {
 		this.lastEditTime = lastEditTime;
 	}
 
-	public Long getParentId() {
+	public int getParentId() {
 		return parentId;
 	}
 
-	public void setParentId(Long parentId) {
+	public void setParentId(int parentId) {
 		this.parentId = parentId;
 	}
 

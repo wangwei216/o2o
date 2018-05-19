@@ -161,7 +161,7 @@
         shop_id
         FROM
         tb_product
-        <where>
+     <where>
             <if
                     test="productCondition.shop!=null
 				 and productCondition.shop.shopId!=null">
@@ -173,8 +173,8 @@
                 and product_category_id =
                 #{productCondition.productCategory.productCategoryId}
             </if>
-            <!-- 写like语句的时候 一般都会写成 like '% %' 在mybatis里面写就是应该是 like '%${name} %' 而不是
-                '%#{name} %' ${name} 是不带单引号的，而#{name} 是带单引号的 -->
+           <!-- &lt;!&ndash; 写like语句的时候 一般都会写成 like '% %' 在mybatis里面写就是应该是 like '%${name} %' 而不是
+                '%#{name} %' ${name} 是不带单引号的，而#{name} 是带单引号的 &ndash;&gt;-->
             <if test="productCondition.productName!=null">
                 and product_name like '%${productCondition.productName}%'
             </if>

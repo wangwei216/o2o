@@ -17,6 +17,8 @@ public class FileUtil {
 			"yyyyMMddHHmmss"); // 时间格式化的格式
 	private static final Random r = new Random();
 
+	/*
+	* 这个是得到图片的基本路径*/
 	public static String getImgBasePath() {
 		String os = System.getProperty("os.name");
 		String basePath = "";

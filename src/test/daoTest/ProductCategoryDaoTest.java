@@ -28,13 +28,13 @@ public class ProductCategoryDaoTest extends BaseTest {
 		productCategory.setProductCategoryName("商品类别1");
 		productCategory.setPriority(1);
 		productCategory.setCreateTime(new Date());
-		productCategory.setShopId(1L);
+		productCategory.setShopId(1);
 
 			ProductCategory productCategory2 = new ProductCategory();
 			productCategory2.setProductCategoryName("商品类别2");
 			productCategory2.setPriority(3);
 			productCategory2.setCreateTime(new Date());
-			productCategory2.setShopId(2L);
+			productCategory2.setShopId(2);
 
 		List<ProductCategory> productCategoryList = new ArrayList<ProductCategory>();
 		productCategoryList.add(productCategory);

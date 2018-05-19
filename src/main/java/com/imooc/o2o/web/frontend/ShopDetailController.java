@@ -85,7 +85,7 @@ public class ShopDetailController {
         Map<String,Object> modelMap = new HashMap<String, Object>();
         int pageSize = HttpServletRequestUtil.getInt(request, "pageSize");
         int pageIndex = HttpServletRequestUtil.getInt(request, "pageIndex");
-        long shopId = HttpServletRequestUtil.getLong(request, "shopId");
+        int shopId = HttpServletRequestUtil.getInt(request, "shopId");
         if ((pageIndex> -1)&&(pageSize> -1)&&(shopId> -1) ){
 
             long productCategoryId = HttpServletRequestUtil.getLong(request, "productCategoryId");
@@ -110,7 +110,7 @@ public class ShopDetailController {
     /*
      * 这个是获取组合之后的查询条件,目的是为了模糊查询得到商品的列表及总数信息
      * */
-    private Product compactProductCondition4Search(long shopId,
+    private Product compactProductCondition4Search(int shopId,
                                                    long productCategoryId, String productName) {
         Product productCondition = new Product();
         Shop shop = new Shop();

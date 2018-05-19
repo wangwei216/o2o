@@ -1741,6 +1741,7 @@ shop_id</ColNames>
     </foreign-key>
     <column id="390" parent="244" name="shop_category_id">
       <Position>1</Position>
+      <Comment>这个是店铺类别的实体</Comment>
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>

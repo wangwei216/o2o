@@ -7,7 +7,7 @@ import java.util.List;
 
 public interface ShopDao {
 
-    //这个是实现对上铺的增
+    //这个是实现对商铺的增加
     int insertShop(Shop shop);
     //这个实现的是对商铺的修改
     int updateShop(Shop shop);

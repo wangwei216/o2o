@@ -107,7 +107,9 @@
 
     <!--进来的第一个界面-->
     <welcome-file-list>  
-        <welcome-file>html/shop/shopoperation.html</welcome-file>
-    </welcome-file-list> 
+        <welcome-file>html/shop/shoplist.html</welcome-file>
+    </welcome-file-list>
+
+
      <session-config><session-timeout>2</session-timeout></session-config>
 </web-app>

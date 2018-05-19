@@ -44,7 +44,7 @@ public class ProductServiceImpl implements ProductService {
     @Transactional
     public ProductExecution addProduct(Product product, ImageHolder thumbnail, List<ImageHolder> productImgHolderList) throws ProductCategoryOperationException {
        //先进行空值的判断
-        if (product!=null && product.getShop()!=null && product.getShop().getShopId()!=null){
+        if (product!=null && product.getShop()!=null && product.getShop().getShopId()> -1){
             //给商品设置上默认属性
             product.setCreateTime(new Date());
             product.setLastEditTime(new Date());
@@ -164,7 +164,7 @@ public class ProductServiceImpl implements ProductService {
     public ProductExecution modifyProduct(Product product, ImageHolder thumbnail, List<ImageHolder> productImgHolderList) throws ProductCategoryOperationException {
 
         //先进行空值
-        if(product!=null && product.getShop()!=null && product.getShop().getShopId()!=null){
+        if(product!=null && product.getShop()!=null && product.getShop().getShopId()> -1){
             product.setLastEditTime(new Date());
             if(thumbnail!=null){
                 //先获取原有的缩略图信息

@@ -34,6 +34,7 @@ import java.util.Map;
 @Controller
 @RequestMapping("/shop")
 public class ShopManagementController {
+
 	@Autowired
 	private ShopService shopService;
 	@Autowired
@@ -80,6 +81,7 @@ public class ShopManagementController {
 			modelMap.put("errMsg", "输入了错误的验证码");
 			return modelMap;
 		}
+		/*这里是处理图片的*/
 		ObjectMapper mapper = new ObjectMapper();
 		Shop shop = null;
 		String shopStr = HttpServletRequestUtil.getString(request, "shopStr");
@@ -104,7 +106,7 @@ public class ShopManagementController {
 		shop.setShopId(currentShop.getShopId());
 
 		//修改店铺信息
-		if (shop != null && shop.getShopId() != null) {
+		if (shop != null && shop.getShopId() > -1) {
 			ShopExecution se;
 			try {
 
@@ -155,7 +157,7 @@ public class ShopManagementController {
 	*
 	* */
 	@RequestMapping(value = "/registershop", method = RequestMethod.GET)
-	@ResponseBody
+
 	private Map<String, Object> registerShop(HttpServletRequest request) throws IOException {
 		Map<String, Object> modelMap = new HashMap<String, Object>();
 
@@ -241,8 +243,8 @@ public class ShopManagementController {
 		//通过session来获取用户的信息
 		PersonInfo user = (PersonInfo) request.getSession().getAttribute("user");
 		//因为没有登录，需要为用户设置一个默认值
-		 user.setUserId(1L);
-		 Long employeeId = user.getUserId();
+		 user.setUserId(1);
+		 int employeeId = user.getUserId();
 		 List<Shop> shopList = new ArrayList<Shop>();
 		 try {
 		 	Shop shopCondition = new Shop();
@@ -266,7 +268,7 @@ public class ShopManagementController {
 	private Map<String,Object> getShopManagementInfo(HttpServletRequest request){
 		Map<String ,Object> modelMap = new HashMap<String, Object>();
 		//从用户的请求中获取信息
-		long shopId = HttpServletRequestUtil.getLong(request, "shopId");
+		int shopId = HttpServletRequestUtil.getInt(request, "shopId");
 		//然后对得到的shopId进行判断
 		if (shopId<=0){
 			//看看能不能从用户请求的session中获取到你之前查询到的

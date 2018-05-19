@@ -287,7 +287,7 @@ public class ProductManagementController {
             //然后需要从当前请求过来的session中再去获取你需要的店铺信息，也就是获取shopId，这个currentShop一般是从前台传进来的
             Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
                 //队拿到的数据进行判断
-                if ((pageIndex> -1)&&(pageSize> -1)&&(currentShop!=null) && (currentShop.getShopId()!=null)){
+                if ((pageIndex> -1)&&(pageSize> -1)&&(currentShop!=null) ){
                     //这个是获取传入的时候需要检索的条件，可以从某个商品类别查找商品名去筛选这个店铺下的商品列表信息
                     long prodcutCategoryId = HttpServletRequestUtil.getLong(request, "productCategoryId");
                     String productName = HttpServletRequestUtil.getString(request, "productName");
@@ -310,7 +310,7 @@ public class ProductManagementController {
         *
         * 这个是一个封装的方法：就是封装了商品的查询条件到Product实例中
         * */
-        private Product compactProductCondition(long shopId,long prodcutCategoryId,String productName){
+        private Product compactProductCondition(int shopId,long prodcutCategoryId,String productName){
             Product productCondition = new Product();
             Shop shop = new Shop();
             //把传进来的shopId设置到shop中

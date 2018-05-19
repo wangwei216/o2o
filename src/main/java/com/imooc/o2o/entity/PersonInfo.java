@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class PersonInfo {
 
-	private Long userId;
+	private int userId;
 	private String name;
 	private Date birthday;
 	private String gender;
@@ -18,11 +18,11 @@ public class PersonInfo {
 	private Date lastEditTime;
 	private Integer enableStatus;
 
-	public Long getUserId() {
+	public int getUserId() {
 		return userId;
 	}
 
-	public void setUserId(Long userId) {
+	public void setUserId(int userId) {
 		this.userId = userId;
 	}
 

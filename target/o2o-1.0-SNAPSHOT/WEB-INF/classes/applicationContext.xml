@@ -63,6 +63,10 @@
              <property name="maxInMemorySize" value="4096" />
             <property name="resolveLazily" value="true" />
     </bean>
+    <!-- 将自定义的swagger配置类加载到spring容器 -->
+   <!-- <bean class="com.imooc.o2o.swagger.SwaggerConfig" />
+    <mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />
+    <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/" />-->
 
  <!--   &lt;!&ndash; 避免IE执行AJAX时,返回JSON出现下载文件 &ndash;&gt;
     <bean id="mappingJacksonHttpMessageConverter"

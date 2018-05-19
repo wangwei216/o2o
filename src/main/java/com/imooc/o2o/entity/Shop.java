@@ -5,9 +5,9 @@ import java.util.List;
 
 public class Shop {
 
-	private Long shopId;
-	private Long ownerId;
-	private Long shopCategoryId;
+	private int shopId;
+	private int ownerId;
+	private int shopCategoryId;
 	private String shopName;
 	private String shopDesc;
 	private String shopAddr;
@@ -20,33 +20,42 @@ public class Shop {
 	private Date lastEditTime;
 	private Integer enableStatus;
 	private String advice;
+	private String personInfo;
+
+	public String getPersonInfo() {
+		return personInfo;
+	}
+
+	public void setPersonInfo(String personInfo) {
+		this.personInfo = personInfo;
+	}
 
 	private List<ShopAuthMap> staffList;
 	private Area area;
 	private ShopCategory shopCategory;
 	private ShopCategory parentCategory;
 
-	public Long getShopId() {
+	public int getShopId() {
 		return shopId;
 	}
 
-	public void setShopId(Long shopId) {
+	public void setShopId(int shopId) {
 		this.shopId = shopId;
 	}
 
-	public Long getOwnerId() {
+	public int getOwnerId() {
 		return ownerId;
 	}
 
-	public void setOwnerId(Long ownerId) {
+	public void setOwnerId(int ownerId) {
 		this.ownerId = ownerId;
 	}
 
-	public Long getShopCategoryId() {
+	public int getShopCategoryId() {
 		return shopCategoryId;
 	}
 
-	public void setShopCategoryId(Long shopCategoryId) {
+	public void setShopCategoryId(int shopCategoryId) {
 		this.shopCategoryId = shopCategoryId;
 	}
 

@@ -24,22 +24,24 @@ public class ShopCategoryDaoTest extends com.imooc.o2o.test.BaseTest {
 		List<ShopCategory> shopCategoryList = shopCategoryDao
 				.queryShopCategory(sc);
 		assertEquals(3, shopCategoryList.size());
-		sc.setParentId(1L);
+		sc.setParentId(1);
 		shopCategoryList = shopCategoryDao.queryShopCategory(sc);
 		assertEquals(1, shopCategoryList.size());
-		sc.setParentId(null);
-		sc.setShopCategoryId(0L);
+		sc.setParentId(0);
+		sc.setShopCategoryId(0);
 		shopCategoryList = shopCategoryDao.queryShopCategory(sc);
 		assertEquals(2, shopCategoryList.size());
 
 	}
 
-	/*这个测试的是*/
+	/*这个测试的是测试Dao查询商品类别的列表*/
 	@Test
 	public void testQueryShopCategory(){
 
-		List<ShopCategory> shopCategoryList = shopCategoryDao.queryShopCategory(null);
+
+		List<ShopCategory> shopCategoryList = shopCategoryDao.queryShopCategory(new ShopCategory());
 		System.out.println(shopCategoryList.size());
+		assertEquals(18,shopCategoryList.size());
 
 	}
 

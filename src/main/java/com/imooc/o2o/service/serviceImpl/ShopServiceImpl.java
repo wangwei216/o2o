@@ -88,7 +88,7 @@ public class ShopServiceImpl implements ShopService {
 		* 1，判断是否需要处理图片
 		* 2，更新店铺信息
 		* */
-		if (shop==null||shop.getShopId()==null){
+		if (shop==null||shop.getShopId()<0){
 			return new ShopExecution(ShopStateEnum.NULL_SHOP);
 		}else {
 			//开始判断是否需要处理图片，如果图片存在的话，就需要先删除掉图片的文件夹

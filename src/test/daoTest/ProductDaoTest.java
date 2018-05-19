@@ -29,11 +29,12 @@ public class ProductDaoTest extends BaseTest {
 	private ProductImgDao productImgDao;
 
 	@Test
+	@Ignore
 	public void testAInsertProduct() throws Exception {
 		Shop shop1 = new Shop();
-		shop1.setShopId(1L);
+		shop1.setShopId(1);
 		Shop shop2 = new Shop();
-		shop2.setShopId(2L);
+		shop2.setShopId(2);
 		ProductCategory pc1 = new ProductCategory();
 		pc1.setProductCategoryId(2L);
 		ProductCategory pc2 = new ProductCategory();
@@ -93,7 +94,7 @@ public class ProductDaoTest extends BaseTest {
 		count = productDao.queryProductCount(product);
 		assertEquals(3, count);
 		Shop shop = new Shop();
-		shop.setShopId(2L);
+		shop.setShopId(2);
 		product.setShop(shop);
 		productList = productDao.queryProductList(product, 0, 3);
 		assertEquals(1, productList.size());
