@@ -43,7 +43,12 @@
             <result column="create_time" property="createTime" />
             <result column="last_edit_time" property="lastEditTime" />
         </association>
-        <association property="parentCategory" column="parent_category_id"
+        <association property="personInfo" column="owner_id"
+                     javaType="com.imooc.o2o.entity.PersonInfo">
+            <id column="user_id" property="userId"/>
+            <result column="name" property="name"/>
+        </association>
+        <!--<association property="parentCategory" column="parent_category_id"
                      javaType="com.imooc.o2o.entity.ShopCategory">
             <id column="parent_category_id" property="shopCategoryId" />
             <result column="shop_category_name" property="shopCategoryName" />
@@ -52,8 +57,9 @@
             <result column="priority" property="priority" />
             <result column="create_time" property="createTime" />
             <result column="last_edit_time" property="lastEditTime" />
-        </association>
-        <collection property="staffList" column="shop_id"
+        </association>-->
+
+        <!--<collection property="staffList" column="shop_id"
                     ofType="com.imooc.o2o.entity.ShopAuthMap">
             <id column="shop_auth_id" property="shopAuthId" />
             <result column="employee_id" property="employeeId" />
@@ -64,7 +70,7 @@
             <result column="create_time" property="createTime" />
             <result column="last_edit_time" property="lastEditTime" />
             <result column="enable_status" property="enableStatus" />
-        </collection>
+        </collection>-->
     </resultMap>
 
 
@@ -115,31 +121,33 @@
     </update>
 
     <!--是映射的是通过shopId来去查询shop,因为不只含有shop类型，还有别的类型-->
-    <select id="queryByShopId" resultMap="shopMap" parameterType="Long">
+    <select id="queryByShopId" resultMap="shopMap" parameterType="java.lang.Long">
         <!-- 具体的sql -->
         SELECT
-        shop_id,
-        owner_id,
-        area_id,
-        shop_category_id,
-        parent_category_id,
-        shop_name,
-        shop_desc,
-        shop_addr,
-        phone,
-        shop_img,
-        longitude,
-        latitude,
-        priority,
-        create_time,
-        last_edit_time,
-        enable_status,
-        advice
+        s.shop_id,
+        s.shop_name,
+        s.shop_desc,
+        s.shop_addr,
+        s.phone,
+        s.shop_img,
+        s. priority,
+        s. create_time,
+        s. last_edit_time,
+        s.enable_status,
+        s. advice,
+        a.area_id,
+        a.area_name,
+        sc.shop_category_id,
+        sc.shop_category_name
         FROM
         tb_shop s ,
         tb_area a,
         tb_shop_category sc
         WHERE
+        s.area_id = a.area_id
+        AND
+        s.shop_category_id = s.shop_category_id
+        AND
         shop_id = #{shopId}
     </select>
 
@@ -214,7 +222,7 @@
         LIMIT #{rowIndex},#{pageSize};
     </select>
     <!--这个是对分页所需要的查询一共能查询到多少条数据来进行分页-->
-    <select id="queryShopCount" resultType="int">
+    <select id="queryShopCount" resultType="java.lang.Integer">
         SELECT
         count(1)
         FROM

@@ -79,12 +79,14 @@ public class ShopDaoTest extends BaseTest {
 
 	@Test
 	public void testCQueryByShopId() throws Exception {
-		long shopId = 1;
+		long shopId = 15;
 		Shop shop = shopDao.queryByShopId(shopId);
-		System.out.println(shop);
+		System.out.println("从shop实体中获取区域实体信息中的名字"+shop.getArea().getAreaName());
+		System.out.println("从shop实体中获取区域实体信息中的id"+ shop.getArea().getAreaId());
 	}
 
 	@Test
+	@Ignore
 	public void testDUpdateShop() {
 		long shopId = 1;
 		Shop shop = shopDao.queryByShopId(shopId);

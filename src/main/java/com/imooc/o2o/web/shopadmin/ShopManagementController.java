@@ -32,7 +32,7 @@ import java.util.Map;
 
 
 @Controller
-@RequestMapping("/shop")
+@RequestMapping("/shopadmin")
 public class ShopManagementController {
 
 	@Autowired
@@ -41,6 +41,47 @@ public class ShopManagementController {
 	private ShopCategoryService shopCategoryService;
 	@Autowired
 	private AreaService areaService;
+
+	/*
+	* 这个是通过shopID查询到shop实体中国关联的其他所有表的信息的
+	* 	1.先定义一个model来最终返回给前台
+	* 	2.因为你调用service的时候需要一个shopId的参数来去查询shop实体所有对象，所以这里你需要从前台获取这个shopId
+	* 	3.得到shopId之后，还需要对shopId进行去判断是不是拿到了数据
+	* 	4.如果拿到数据的话，就直接去调用service层的方法拿到从DAO层查询shop之后的数据
+	* 	5.这一步是基于前台进行考虑的，因为前台需要的还有区域信息Area列表，所以去调用areaService的方法去查询area的列表
+	*
+	* 	6.最重要的是你要把你查询得到的数据都给set进这个modelMap中去，前面是键后面是你查询得到的值,完事把成功的提示也给set进模型中
+	*如果到这里你还需要保证项目的完整性，需要进行一些错误信息提示啊或者是try，catch啊
+	* */
+	@RequestMapping(value = "/getshopbyshopid",method = RequestMethod.GET)
+	@ResponseBody
+	private Map<String,Object> getShopByShopId(HttpServletRequest request){
+		Map<String,Object> modelMap = new HashMap<String, Object>();
+		/*这里只是用了一二封装后的getparamater,所以说就算我不用那个封装好的也可以拿到数据
+		String shopId1 = request.getParameter("shopId");*/
+		long shopId = HttpServletRequestUtil.getLong(request, "shopId");
+		if (shopId > -1){
+			try {
+				Shop shop = shopService.getByShopId(shopId);
+				List<Area> areaList = areaService.getAreaList();
+				modelMap.put("shop",shop);
+				modelMap.put("areaList",areaList);
+				modelMap.put("success",true);
+			}
+			catch (Exception e){
+				modelMap.put("success",false);
+				modelMap.put("errMsg",e.toString());
+			}
+
+		}
+		else {
+			modelMap.put("success",false);
+			modelMap.put("errMsg","shopId is Null");
+		}
+			return modelMap;
+
+	}
+
 
 	@RequestMapping(value = "/getshopinitinfo",method = RequestMethod.GET)
 	@ResponseBody

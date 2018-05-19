@@ -107,7 +107,7 @@
 
     <!--进来的第一个界面-->
     <welcome-file-list>  
-        <welcome-file>html/shop/shoplist.html</welcome-file>
+        <welcome-file>html/frontend/index.html</welcome-file>
     </welcome-file-list>
 
 

@@ -20,19 +20,24 @@ public class Shop {
 	private Date lastEditTime;
 	private Integer enableStatus;
 	private String advice;
-	private String personInfo;
+	/*因为你需要把其他几个实体对象都要可以通过shop对象去拿到其他实体的属性，需要把其他几个实体的
+	* 的字段名给当成shop实体中属性，这样就可以通过shop实体中去拿到了别的实体的属性*/
+	private Area area;
+	private ShopCategory shopCategory;
+	private PersonInfo personInfo;
 
-	public String getPersonInfo() {
+
+
+
+	public PersonInfo getPersonInfo() {
 		return personInfo;
 	}
 
-	public void setPersonInfo(String personInfo) {
+	public void setPersonInfo(PersonInfo personInfo) {
 		this.personInfo = personInfo;
 	}
 
 	private List<ShopAuthMap> staffList;
-	private Area area;
-	private ShopCategory shopCategory;
 	private ShopCategory parentCategory;
 
 	public int getShopId() {
