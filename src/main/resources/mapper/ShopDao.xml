@@ -157,9 +157,9 @@
     s.shop_id,
     s.owner_id,
     a.area_id,
-    a.area_name
-   sc. shop_category_id,
-    sc.shop_category_name
+    a.area_name,
+    sc. shop_category_id,
+    sc.shop_category_name,
     s.shop_name,
     s.shop_desc,
     s.shop_addr,
@@ -174,33 +174,33 @@
         tb_shop s ,
         tb_area a,
         tb_shop_category sc
-
         <where>
-            <if test="shopCondition.shopId!=null">
+           <!-- <if test="shopCondition.shopId!=null">
                 and s.shop_id = #{shopCondition.shopId}
-            </if>
+            </if>-->
             <if test="shopCondition.shopCategory!=null
 				 and shopCondition.shopCategory.shopCategoryId!=null">
                 and sc.shop_category_id =
                 #{shopCondition.shopCategory.shopCategoryId}
             </if>
-            <!--这个是新家的-->
-            <if test="shopCondition.shopCategory!=null
-				 and shopCondition.shopCategory.parent!=null and shopCondition.shopCategory.parent.shopCategoryId!=null">
-                AND s.shop_category_id in (SELECT shop_category_id FROM tb_shop_category
-                WHERE parent_id=#{shopCondition.shopCategory.parent.shopCategoryId})
-            </if>
-
             <if test="shopCondition.area!=null
 				 and shopCondition.area.areaId!=null">
                 and s.area_id =
                 #{shopCondition.area.areaId}
             </if>
+            <!--这个是新家的-->
+           <!-- <if test="shopCondition.shopCategory!=null
+				 and shopCondition.shopCategory.parent!=null and shopCondition.shopCategory.parent.shopCategoryId!=null">
+                AND s.shop_category_id in (SELECT shop_category_id FROM tb_shop_category
+                WHERE parent_id=#{shopCondition.shopCategory.parent.shopCategoryId})
+            </if>
+-->
+<!--
             <if test="shopCondition.parentCategory!=null
 				 and shopCondition.parentCategory.shopCategoryId!=null">
                 and sc.parent_category_id =
                 #{shopCondition.parentCategory.shopCategoryId}
-            </if>
+            </if>-->
             <!-- 写like语句的时候 一般都会写成 like '% %' 在mybatis里面写就是应该是 like '%${name} %' 而不是
                 '%#{name} %' ${name} 是不带单引号的，而#{name} 是带单引号的 -->
             <if test="shopCondition.shopName!=null">
@@ -209,9 +209,9 @@
             <if test="shopCondition.enableStatus!=null">
                 and s.enable_status = #{shopCondition.enableStatus}
             </if>
-           <!-- <if test="shopCondition.owner!=null and shopCondition.owner.userId!=null">
-                and s.owner_id =#{shopCondition.owner.userId}
-            </if>-->
+            <if test="shopCondition.personInfo!=null and shopCondition.personInfo.userId!=null">
+                and s.owner_id =#{shopCondition.personInfo.userId}
+            </if>
             AND
             s.area_id=a.area_id
             AND
@@ -230,32 +230,32 @@
         tb_area a,
         tb_shop_category sc
         <where>
-            <if test="shopCondition.shopId!=null">
-                and s.shop_id = #{shopCondition.shopId}
-            </if>
+            <!-- <if test="shopCondition.shopId!=null">
+                 and s.shop_id = #{shopCondition.shopId}
+             </if>-->
             <if test="shopCondition.shopCategory!=null
 				 and shopCondition.shopCategory.shopCategoryId!=null">
                 and sc.shop_category_id =
                 #{shopCondition.shopCategory.shopCategoryId}
             </if>
-
-            <!--这个是新家的-->
-            <if test="shopCondition.shopCategory!=null
-				 and shopCondition.shopCategory.parent!=null and shopCondition.shopCategory.parent.shopCategoryId!=null">
-                AND s.shop_category_id in (SELECT shop_category_id FROM tb_shop_category
-                WHERE parent_id=#{shopCondition.shopCategory.parent.shopCategoryId})
-            </if>
-
             <if test="shopCondition.area!=null
 				 and shopCondition.area.areaId!=null">
                 and s.area_id =
                 #{shopCondition.area.areaId}
             </if>
-            <if test="shopCondition.parentCategory!=null
-				 and shopCondition.parentCategory.shopCategoryId!=null">
-                and sc.parent_category_id =
-                #{shopCondition.parentCategory.shopCategoryId}
-            </if>
+            <!--这个是新家的-->
+            <!-- <if test="shopCondition.shopCategory!=null
+                  and shopCondition.shopCategory.parent!=null and shopCondition.shopCategory.parent.shopCategoryId!=null">
+                 AND s.shop_category_id in (SELECT shop_category_id FROM tb_shop_category
+                 WHERE parent_id=#{shopCondition.shopCategory.parent.shopCategoryId})
+             </if>
+ -->
+            <!--
+                        <if test="shopCondition.parentCategory!=null
+                             and shopCondition.parentCategory.shopCategoryId!=null">
+                            and sc.parent_category_id =
+                            #{shopCondition.parentCategory.shopCategoryId}
+                        </if>-->
             <!-- 写like语句的时候 一般都会写成 like '% %' 在mybatis里面写就是应该是 like '%${name} %' 而不是
                 '%#{name} %' ${name} 是不带单引号的，而#{name} 是带单引号的 -->
             <if test="shopCondition.shopName!=null">
@@ -264,8 +264,8 @@
             <if test="shopCondition.enableStatus!=null">
                 and s.enable_status = #{shopCondition.enableStatus}
             </if>
-            <if test="shopCondition.owner!=null and shopCondition.owner.userId!=null">
-                and s.owner_id ={shopCondition.owner.userId}
+            <if test="shopCondition.personInfo!=null and shopCondition.personInfo.userId!=null">
+                and s.owner_id =#{shopCondition.personInfo.userId}
             </if>
             AND
             s.area_id=a.area_id

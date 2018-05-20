@@ -53,6 +53,7 @@ public class ShopManagementController {
 	* 	6.最重要的是你要把你查询得到的数据都给set进这个modelMap中去，前面是键后面是你查询得到的值,完事把成功的提示也给set进模型中
 	*如果到这里你还需要保证项目的完整性，需要进行一些错误信息提示啊或者是try，catch啊
 	* */
+	//TODO 这个方法测试成功
 	@RequestMapping(value = "/getshopbyshopid",method = RequestMethod.GET)
 	@ResponseBody
 	private Map<String,Object> getShopByShopId(HttpServletRequest request){
@@ -82,7 +83,6 @@ public class ShopManagementController {
 
 	}
 
-
 	@RequestMapping(value = "/getshopinitinfo",method = RequestMethod.GET)
 	@ResponseBody
 	private Map<String,Object> getShopInitInfo(){
@@ -109,8 +109,14 @@ public class ShopManagementController {
 		return modelMap;
 	}
 
-
-	/*修改店铺信息*/
+	/*
+	 *修改店铺信息其实是和注册店铺信息是差不多的
+	 *	 1.先检查验证码是不是正确
+	 *	 2.然后从前台得到上传过来的文件图片流
+	 *	 3.
+	 *
+	 *
+	 * */
 	@RequestMapping(value = "/modifyshop", method = RequestMethod.POST)
 	@ResponseBody
 	private Map<String, Object> modifyShop(HttpServletRequest request) {
@@ -135,7 +141,17 @@ public class ShopManagementController {
 			shopImg = (CommonsMultipartFile) multipartRequest
 					.getFile("shopImg");
 		}
+		//2.修改店铺信息
+		ShopExecution se;
 		try {
+
+			if (shopImg==null){
+				se = shopService.modifyShop(shop,null);
+			}
+			else {
+				se = shopService.modifyShop(shop,null);
+			}
+			//TODO 这里不是很理解
 			shop = mapper.readValue(shopStr, Shop.class);
 		} catch (Exception e) {
 			modelMap.put("success", false);
@@ -148,7 +164,7 @@ public class ShopManagementController {
 
 		//修改店铺信息
 		if (shop != null && shop.getShopId() > -1) {
-			ShopExecution se;
+			/*ShopExecution se;*/
 			try {
 
 				if (shopImg==null) {
@@ -159,6 +175,15 @@ public class ShopManagementController {
 				}
 				if (se.getState()==ShopStateEnum.SUCCESS.getState()){
 					modelMap.put("success", true);
+
+					@SuppressWarnings("unchecked")
+					List<Shop> shopList = (List<Shop>) request.getSession().getAttribute("shopList");
+					//如果店铺是第一次创建的
+					if (shopList==null || shopList.size()==0){
+						shopList = new ArrayList<Shop>();
+					}
+					shopList.add(se.getShop());
+					request.getSession().setAttribute("shopList",shopList);
 				}
 				else {
 					modelMap.put("success", false);
@@ -215,6 +240,9 @@ public class ShopManagementController {
 			modelMap.put("errMsg",e.getMessage());
 			return modelMap;
 		}
+		/*接受前台相应的参数，包括店铺的信息和图片信息*/
+
+
 		//这个是用来实现上传文件的，
 		CommonsMultipartFile shopImg = null;
 		CommonsMultipartResolver commonsMultipartResolver = new CommonsMultipartResolver
@@ -246,6 +274,7 @@ public class ShopManagementController {
 				if (se.getState() == ShopStateEnum.CHECK.getState()) {
 					modelMap.put("success", true);
 					// 若shop创建成功，则加入session中，作为权限使用
+					//TODO 该用户可以操作的店铺列表,一旦店铺创建成功就吧店铺给set经session中去
 					@SuppressWarnings("unchecked")
 					List<Shop> shopList = (List<Shop>) request.getSession()
 							.getAttribute("shopList");
@@ -273,24 +302,32 @@ public class ShopManagementController {
 		}
 		return modelMap;
 	}
-
-
-	/*得到shopList的信息的前台*/
+	/*
+	* 如何把从后台拿到的数据返回给得到shopList的信息的前台的思路
+	* 	1.先定义一个返回数据的模型（可以是model、modelMap、modelAndView）
+	* 	2.到这你先知道你service层需要什么参数，接下来你要一直围绕着service层需要穿进去的参数来考虑问题。然后准备需要的参数
+	* 	3.因为service层需要的是一个shop实体类，而且实体类中还需要把另外一个实体类PersonInfo作为shop实体的属性给set进去
+	* 	//TODO 下面这步其实不太理解
+	* 	4.然后你还需要为这个PersonInfo实体类set进去一个ID，然后连同这个实体一块把这个实体给set进request的session域中
+	*
+	* */
 	@RequestMapping(value = "/getshoplist",method = RequestMethod.GET)
 	@ResponseBody
 	private Map<String,Object>getShopList(HttpServletRequest request){
 
 		Map<String ,Object> modelMap = new HashMap<String, Object>();
 		//通过session来获取用户的信息
-		PersonInfo user = (PersonInfo) request.getSession().getAttribute("user");
+		/*PersonInfo user = (PersonInfo) request.getSession().getAttribute("user");*/
+		PersonInfo user = new PersonInfo();
 		//因为没有登录，需要为用户设置一个默认值
-		 user.setUserId(1);
+		 user.setUserId(8);
+		 request.getSession().setAttribute("user",user);
 		 int employeeId = user.getUserId();
 		 List<Shop> shopList = new ArrayList<Shop>();
 		 try {
 		 	Shop shopCondition = new Shop();
-/*这里有问题，本来视频上是这样写的，但是没有setOwner这个方法
-			shopCondition.setOwner(user);*/
+//TODO 这里有问题，本来视频上是这样写的，但是没有setOwner这个方法,其实这里的owner就是PersonInfo实体对象
+			shopCondition.setPersonInfo(user);
 		 	ShopExecution se= shopService.getShopList(shopCondition,0,100);
 		 	modelMap.put("shopList",se.getShopList());
 		 	modelMap.put("success",true);

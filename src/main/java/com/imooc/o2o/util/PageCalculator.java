@@ -9,7 +9,7 @@ public class PageCalculator {
 		return totalPage;
 	}
 
-	//返回的是每次查询的起始位置
+	//这个是根据传进来的页面的下标和每一个页面的大小，来返回的是每次查询的起始位置
 	public static int calculateRowIndex(int pageIndex, int pageSize) {
 		return (pageIndex > 0) ? (pageIndex - 1) * pageSize : 0;
 	}

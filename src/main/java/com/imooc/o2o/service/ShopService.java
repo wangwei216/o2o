@@ -30,6 +30,6 @@ public interface ShopService {
 	ShopExecution modifyShop(Shop shop, ImageHolder thumbnail) throws ShopOperationException;
 
 	/*根据shopCondition分页返回响应的数据*/
-	public ShopExecution getShopList(Shop shopCondition,int pageIndex,int pageSize);
+	 ShopExecution getShopList(Shop shopCondition,int pageIndex,int pageSize);
 
 }

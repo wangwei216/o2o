@@ -40,7 +40,7 @@
 	</mvc:interceptors> -->
 
     <!-- 静态资源文件，不会被Spring MVC拦截 -->
-    <mvc:resources mapping="/swagger/**" location="/swagger/" />
+   <!-- <mvc:resources mapping="/swagger/**" location="/swagger/" />-->
     <!--  配置 页面控制器 -->
      <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
          <property name="prefix" value="/html/"/>

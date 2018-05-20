@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @RequestMapping(value = "/shopadmin",method = RequestMethod.GET)
 public class ShopAdminController {
 
+    /*这个是转发到显示商铺信息，也就是shop实体信息的展示，而且还有其他外键表的信息（需要传入shopId）*/
     @RequestMapping("/shopoperation")
     public String shopOperation() {
         return "/shop/shopoperation";

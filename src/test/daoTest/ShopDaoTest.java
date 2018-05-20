@@ -2,6 +2,7 @@ package daoTest;
 
 import com.imooc.o2o.dao.ShopDao;
 import com.imooc.o2o.entity.Area;
+import com.imooc.o2o.entity.PersonInfo;
 import com.imooc.o2o.entity.Shop;
 import com.imooc.o2o.entity.ShopCategory;
 import com.imooc.o2o.test.BaseTest;
@@ -12,6 +13,7 @@ import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.Date;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
@@ -45,39 +47,47 @@ public class ShopDaoTest extends BaseTest {
 		int effectedNum = shopDao.insertShop(shop);
 		assertEquals(1, effectedNum);
 	}
-/*
 
-	@Test
+	/*@Test
+	@Ignore
 	public void testBQueryByEmployeeId() throws Exception {
 		long employeeId = 1;
 		List<Shop> shopList = shopDao.queryByEmployeeId(employeeId);
 		for (Shop shop : shopList) {
 			System.out.println(shop);
 		}
-	}
+	}*/
 
+	/*
+	* 这个是测试拿到shop的所有数据的总数的列表
+	* */
+	//TODO 通过测试
 	@Test
 	public void testBQueryShopList() throws Exception {
-		Shop shop = new Shop();
-		List<Shop> shopList = shopDao.queryShopList(shop, 0, 2);
-		assertEquals(2, shopList.size());
-		int count = shopDao.queryShopCount(shop);
-		assertEquals(3, count);
-		shop.setShopName("花");
-		shopList = shopDao.queryShopList(shop, 0, 3);
-		assertEquals(2, shopList.size());
-		count = shopDao.queryShopCount(shop);
-		assertEquals(2, count);
-		shop.setShopId(1L);
-		shopList = shopDao.queryShopList(shop, 0, 3);
-		assertEquals(1, shopList.size());
-		count = shopDao.queryShopCount(shop);
-		assertEquals(1, count);
+		Shop shopCondition = new Shop();
+		PersonInfo owner = new PersonInfo();
+		owner.setUserId(8);
+		shopCondition.setPersonInfo(owner);
+		List<Shop> shopList = shopDao.queryShopList(shopCondition, 0, 10);
+		/*assertEquals(10,shopList.size());*/
+		int shopCount = shopDao.queryShopCount(shopCondition);
+		System.out.println("店铺列表的大小"+ shopList.size());
+		System.out.println("店铺的总数"+shopCount);
 
 	}
-*/
 
 	@Test
+	@Ignore
+	public void testQueryShopCount() throws Exception{
+		Shop shopCondition = new Shop();
+		PersonInfo personInfo = new PersonInfo();
+		shopCondition.setPersonInfo(personInfo);
+		int queryShopCount = shopDao.queryShopCount(shopCondition);
+		assertEquals(queryShopCount,10);
+	}
+
+	@Test
+	@Ignore
 	public void testCQueryByShopId() throws Exception {
 		long shopId = 15;
 		Shop shop = shopDao.queryByShopId(shopId);
