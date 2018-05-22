@@ -25,21 +25,25 @@ import java.util.Map;
     @Autowired
     private ProductCategoryService productCategoryService;
 
-    //得到一个商品的商品信息的全部商品
+    /*
+    * 这个是通过shopId来去查询到shopId下面的所有店铺的信息雷彪
+    * */
+    //TODO  测试通过
     @RequestMapping(value = "/getproductcategorylist",method = RequestMethod.GET)
     @ResponseBody
     private Result<List<ProductCategory>> getProductCategoryList(HttpServletRequest request){
         //首先先new一个shop，把得到的shopId给保存进去
-//        Shop shop = new Shop();
-//        shop.setShopId(1L);
-//        //然后把这个shop对象通过session设置给当前的一个currentShop
-//        request.getSession().setAttribute("currentShop", shop);
+        Shop shop = new Shop();
+        shop.setShopId(15);
+       //然后把这个shop对象通过session设置给当前的一个currentShop
+        request.getSession().setAttribute("currentShop", shop);
         //然后在通过session来取出你刚刚设置的shop对象那个,并且保存给新的currentShop对象中
         Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
         //先创建一个List的集合来装这些商品信息的框，判断得到的currentShop是不是为空
         List<ProductCategory> list = null;
         //判断currentShop里面是不是拿到了参数，或者是否为空进行返回Result类型（这个是自定义的）
         if (currentShop!=null && currentShop.getShopId()>0){
+            list=  productCategoryService.getProductCategoryList(currentShop.getShopId());
             return new Result<List<ProductCategory>>(true,list);
         }
         else {
@@ -56,6 +60,7 @@ import java.util.Map;
         Map<String, Object> modelMap = new HashMap<String, Object>();
         //这个是从用户的请求中带有的session中取出currentShop
         Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
+
         //遍历productCategoryList中的每一个,productCategory的内容
         for (ProductCategory pc : productCategoryList) {
             pc.setShopId(currentShop.getShopId());

@@ -28,6 +28,7 @@ public class ProductCategoryServiceImpl implements ProductCategoryService {
     @Transactional
     public ProductCategoryExecution batchInsertProductCategory(List<ProductCategory> productCategoryList) throws Exception {
 
+
         //这个是对得到的商品信息列表进行判断是否为空
         if(productCategoryList!=null && productCategoryList.size()>=0){
 
