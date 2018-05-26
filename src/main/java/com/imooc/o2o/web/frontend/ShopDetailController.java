@@ -88,7 +88,7 @@ public class ShopDetailController {
         int shopId = HttpServletRequestUtil.getInt(request, "shopId");
         if ((pageIndex> -1)&&(pageSize> -1)&&(shopId> -1) ){
 
-            long productCategoryId = HttpServletRequestUtil.getLong(request, "productCategoryId");
+            int productCategoryId = HttpServletRequestUtil.getInt(request, "productCategoryId");
             String productName = HttpServletRequestUtil.getString(request, "productName");
             Product productCondition = compactProductCondition4Search(shopId, productCategoryId, productName);
             //因为要查询的是product对象的列表和总数
@@ -111,7 +111,7 @@ public class ShopDetailController {
      * 这个是获取组合之后的查询条件,目的是为了模糊查询得到商品的列表及总数信息
      * */
     private Product compactProductCondition4Search(int shopId,
-                                                   long productCategoryId, String productName) {
+                                                   int productCategoryId, String productName) {
         Product productCondition = new Product();
         Shop shop = new Shop();
         shop.setShopId(shopId);

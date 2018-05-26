@@ -3,7 +3,7 @@ package com.imooc.o2o.entity;
 import java.util.Date;
 
 public class ProductCategory {
-	private Long productCategoryId;
+	private int productCategoryId;
 	private int shopId;
 	private String productCategoryName;
 	private String productCategoryDesc;
@@ -11,11 +11,11 @@ public class ProductCategory {
 	private Date createTime;
 	private Date lastEditTime;
 
-	public Long getProductCategoryId() {
+	public int getProductCategoryId() {
 		return productCategoryId;
 	}
 
-	public void setProductCategoryId(Long productCategoryId) {
+	public void setProductCategoryId(int productCategoryId) {
 		this.productCategoryId = productCategoryId;
 	}
 

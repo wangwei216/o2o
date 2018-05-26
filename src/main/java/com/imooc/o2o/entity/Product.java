@@ -10,7 +10,7 @@ public class Product implements Serializable{
 	 * 
 	 */
 	private static final long serialVersionUID = -349433539553804024L;
-	private Long productId;
+	private int productId;
 	private String productName;
 	private String productDesc;
 	private String imgAddr;// 简略图
@@ -26,11 +26,11 @@ public class Product implements Serializable{
 	private ProductCategory productCategory;
 	private Shop shop;
 
-	public Long getProductId() {
+	public int getProductId() {
 		return productId;
 	}
 
-	public void setProductId(Long productId) {
+	public void setProductId(int productId) {
 		this.productId = productId;
 	}
 

@@ -63,24 +63,40 @@
     <!--映射的SQL是Product实体中的插入Product信息的功能-->
         <insert id="insertProduct"
                 parameterType="com.imooc.o2o.entity.Product"
-                useGeneratedKeys="true"
-                keyColumn="product_id"
-                keyProperty="productId">
+                useGeneratedKeys="true">
             INSERT INTO
-            tb_product(product_name, product_desc, img_addr,
-            normal_price, promotion_price, priority, create_time,
-            last_edit_time, enable_status, point, product_category_id, shop_id)
+            tb_product(
+            product_name,
+            product_desc,
+            img_addr,
+            normal_price,
+            promotion_price,
+            priority,
+            create_time,
+            last_edit_time,
+            enable_status,
+            point,
+            product_category_id,
+            shop_id
+            )
             VALUES
             (
-            #{productName},#{productDesc},#{imgAddr},#{normalPrice}
-            ,#{promotionPrice},#{priority},#{createTime},#{lastEditTime}
-            ,#{enableStatus},#{productCategory.productCategoryId},#{shop.shopId}
+            #{productName},
+            #{productDesc},
+            #{imgAddr},
+            #{normalPrice},
+            #{promotionPrice},
+            #{priority},
+            #{createTime},
+            #{lastEditTime},
+            #{enableStatus},
+            #{productCategory.productCategoryId},
+            #{shop.shopId}
             )
-
         </insert>
 
     <!--通过商品id productId来查询唯一的商品信息，返回的是商品类型信息-->
-        <select id="queryProductById" resultMap="productMap" parameterType="Long">
+        <select id="queryProductByProductId" resultMap="productMap" parameterType="Long">
             SELECT
             p.product_id,
             p.product_name,
@@ -184,8 +200,10 @@
         </where>
         ORDER BY
         priority DESC
+        <!--这个rowIndex就是指查询数据的起始位置，pageSize是指分页规定的一共多少条数据-->
         LIMIT #{rowIndex},#{pageSize};
     </select>
+
         <!--这个实现的是查询商品的总数，也是为了实现分页-->
     <select id="queryProductCount" resultType="int">
         SELECT count(1) FROM tb_product

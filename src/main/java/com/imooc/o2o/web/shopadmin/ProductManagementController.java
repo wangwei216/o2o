@@ -284,12 +284,13 @@ public class ProductManagementController {
             //因为你调用Service层中getProductList的方法时，你需要先要从前台获取到你需要传进来的参数pageIndex，pageSize
             int pageIndex = HttpServletRequestUtil.getInt(request, "pageIndex");
             int pageSize = HttpServletRequestUtil.getInt(request, "pageSize");
+
             //然后需要从当前请求过来的session中再去获取你需要的店铺信息，也就是获取shopId，这个currentShop一般是从前台传进来的
             Shop currentShop = (Shop) request.getSession().getAttribute("currentShop");
                 //队拿到的数据进行判断
                 if ((pageIndex> -1)&&(pageSize> -1)&&(currentShop!=null) ){
                     //这个是获取传入的时候需要检索的条件，可以从某个商品类别查找商品名去筛选这个店铺下的商品列表信息
-                    long prodcutCategoryId = HttpServletRequestUtil.getLong(request, "productCategoryId");
+                    int prodcutCategoryId = HttpServletRequestUtil.getInt(request, "productCategoryId");
                     String productName = HttpServletRequestUtil.getString(request, "productName");
                     Product productCondition = compactProductCondition(currentShop.getShopId(), prodcutCategoryId, productName);
                     //然后传入查询条件及分页信息，返回相应列表的总数,也就是直接利用上面从前端得到的参数
@@ -310,7 +311,7 @@ public class ProductManagementController {
         *
         * 这个是一个封装的方法：就是封装了商品的查询条件到Product实例中
         * */
-        private Product compactProductCondition(int shopId,long prodcutCategoryId,String productName){
+        private Product compactProductCondition(int shopId,int prodcutCategoryId,String productName){
             Product productCondition = new Product();
             Shop shop = new Shop();
             //把传进来的shopId设置到shop中

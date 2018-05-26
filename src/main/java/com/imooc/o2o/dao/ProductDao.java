@@ -10,6 +10,7 @@ public interface ProductDao {
 	/*
 	* 这个是通过商品id去查询商品的信息
 	* */
+
 	Product queryProductByProductId(long productId);
 
 	/*

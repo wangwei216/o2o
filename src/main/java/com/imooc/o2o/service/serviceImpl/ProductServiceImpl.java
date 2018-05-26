@@ -96,7 +96,7 @@ public class ProductServiceImpl implements ProductService {
             ProductImg productImg = new ProductImg();
             productImg.setImgAddr(imgAddr);
             productImg.setCreateTime(new Date());
-            productImg.setProductId(product.getProductId());
+            productImg.setProductId((long) product.getProductId());
             //把设置成功的给添加到productImgList商品图片列表中
             productImgList.add(productImg);
 
@@ -204,6 +204,10 @@ public class ProductServiceImpl implements ProductService {
 
     /*
     * 从DAO层查询商品列表，并分页实现，可以输入的条件是商品名、商品状态、店铺ID、商品类别处理得到的数据
+    *
+    *   1，在分页功能中service层只需要把前台接受过来的哪一页（也就是你要跳转到哪一页的那个页码并得到那一页的所有数据）
+    *   2. 所以你需要在service层中去实现把这个你用户想要跳转到那个页码，
+    *       转化为后台数据库分页的那个rowIndex（从数据库的多少行开始去拿到数据）
     * */
     @Override
     public ProductExecution getProductList(Product productCondition, int pageIndex, int pageSize) {
