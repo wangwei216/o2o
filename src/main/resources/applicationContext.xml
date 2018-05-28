@@ -23,6 +23,7 @@
         <property name="locations">
             <list>
                 <value>classpath:properties/db.properties</value>
+                <value>classpath:properties/redis.properties</value>
                 <!--如果还有什么需要配置的也可加入进来-->
             </list>
         </property>
@@ -75,6 +76,46 @@
              <property name="maxInMemorySize" value="4096" />
             <property name="resolveLazily" value="true" />
     </bean>
+
+
+
+
+
+    <!--这个是配置redis的配置文件的-->
+   <!-- <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxTotal" value="${redis.pool.maxActive}" />
+        <property name="maxIdle" value="${redis.pool.maxIdle}" />
+        <property name="maxWaitMillis" value="${redis.pool.maxWait}" />
+        <property name="testOnBorrow" value="${redis.pool.testOnBorrow}" />
+    </bean>
+
+    <bean id="jedisWritePool" class="com.imooc.o2o.cache.JedisPoolWriper"
+          depends-on="jedisPoolConfig">
+        <constructor-arg index="0" ref="jedisPoolConfig" />
+        <constructor-arg index="1" value="${redis.hostname}" />
+        <constructor-arg index="2" value="${redis.port}" type="int" />
+    </bean>
+    &lt;!&ndash;Redis的Key的操作&ndash;&gt;
+    <bean id="jedisKeys" class="com.imooc.o2o.cache.JedisUtil$KEYS"
+          scope="singleton">
+        <constructor-arg ref="jedisUtil"></constructor-arg>
+    </bean>
+    &lt;!&ndash;Redis的String的操作&ndash;&gt;
+    <bean id="jedisStrings" class="com.imooc.o2o.cache.JedisUtil$STRINGS"
+          scope="singleton">
+        <constructor-arg ref="jedisUtil"></constructor-arg>
+    </bean>
+    &lt;!&ndash;创建Redis的工具类，封装好Redis的链接&ndash;&gt;
+    <bean id="jedisUtil" class="com.imooc.o2o.cache.JedisUtil"
+          scope="singleton">
+        <property name="jedisPool">
+            <ref bean="jedisWritePool" />
+        </property>
+
+    </bean>-->
+
+
+
     <!-- 将自定义的swagger配置类加载到spring容器 -->
    <!-- <bean class="com.imooc.o2o.swagger.SwaggerConfig" />
     <mvc:resources mapping="swagger-ui.html" location="classpath:/META-INF/resources/" />

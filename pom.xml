@@ -212,6 +212,26 @@
       <version>2.6.1</version>
     </dependency>-->
 
+    <!--这个是使用分布式缓存针对java的redis客户端 jedis的依赖-->
+    <dependency>
+      <groupId>redis.clients</groupId>
+      <artifactId>jedis</artifactId>
+      <version>2.9.0</version>
+    </dependency>
+    <!--这个是使用redis整合mybatis的-->
+    <dependency>
+      <groupId>org.springframework.data</groupId>
+      <artifactId>spring-data-redis</artifactId>
+      <version>1.6.2.RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.mybatis</groupId>
+      <artifactId>mybatis-ehcache</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+
+
   </dependencies>
 
 </project>

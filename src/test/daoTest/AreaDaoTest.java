@@ -4,10 +4,12 @@ import com.imooc.o2o.dao.AreaDao;
 import com.imooc.o2o.entity.Area;
 import com.imooc.o2o.test.BaseTest;
 import org.junit.FixMethodOrder;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.util.Date;
 import java.util.List;
 
 import static org.junit.Assert.assertEquals;
@@ -17,7 +19,8 @@ public class AreaDaoTest extends BaseTest {
 	@Autowired
 	private AreaDao areaDao;
 
-	/*@Test
+	@Test
+	@Ignore
 	public void testAInsertArea() throws Exception {
 		Area area = new Area();
 		area.setAreaName("区域1");
@@ -27,19 +30,22 @@ public class AreaDaoTest extends BaseTest {
 		area.setLastEditTime(new Date());
 		int effectedNum = areaDao.insertArea(area);
 		assertEquals(1, effectedNum);
-	}*/
+	}
 
 	@Test
+	@Ignore
 	public void testBQueryArea() throws Exception {
 		List<Area> areaList = areaDao.queryArea();
 		assertEquals(4, areaList.size());
 	}
 
-	/*@Test
+	@Test
+	@Ignore
 	public void testCUpdateArea() throws Exception {
 		Area area = new Area();
-		area.setAreaId(1L);
-		area.setAreaName("南苑");
+		area.setAreaId(7);
+		area.setAreaName("王伟");
+		area.setAreaDesc("这个是区域信息描述");
 		area.setLastEditTime(new Date());
 		int effectedNum = areaDao.updateArea(area);
 		assertEquals(1, effectedNum);
@@ -47,18 +53,13 @@ public class AreaDaoTest extends BaseTest {
 
 	@Test
 	public void testDDeleteArea() throws Exception {
-		long areaId = -1;
-		List<Area> areaList = areaDao.queryArea();
-		for (Area myArea : areaList) {
-			if ("区域1".equals(myArea.getAreaName())) {
-				areaId = myArea.getAreaId();
-			}
-		}
-		List<Long> areaIdList = new ArrayList<Long>();
-		areaIdList.add(areaId);
-		int effectedNum = areaDao.batchDeleteArea(areaIdList);
-		assertEquals(1, effectedNum);
-	}*/
+		int  areaId = 7;
+		int result = areaDao.deleteArea(areaId);
+		assertEquals(1,result);
+
+	}
+
+
 
 
 }
