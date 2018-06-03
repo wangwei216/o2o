@@ -7,7 +7,11 @@
 
  -->
     <mapper namespace="com.imooc.o2o.dao.AreaDao">
-        <select id="queryArea" resultType="com.imooc.o2o.entity.Area">
+
+    <!-- 缓存类配置 ,如果测试需要的话，就需要加上这个缓存的-->
+    <cache type="com.imooc.o2o.cache.RedisCache" />
+
+    <select id="queryArea" resultType="com.imooc.o2o.entity.Area">
             SELECT area_id,area_name,priority
             ,create_time,last_edit_time
             FROM tb_area

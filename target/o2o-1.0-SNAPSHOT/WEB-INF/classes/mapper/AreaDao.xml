@@ -7,7 +7,11 @@
 
  -->
     <mapper namespace="com.imooc.o2o.dao.AreaDao">
-        <select id="queryArea" resultType="com.imooc.o2o.entity.Area">
+
+    <!-- 缓存类配置 ,如果测试需要的话，就需要加上这个缓存的-->
+    <cache type="com.imooc.o2o.cache.RedisCache" />
+
+    <select id="queryArea" resultType="com.imooc.o2o.entity.Area">
             SELECT area_id,area_name,priority
             ,create_time,last_edit_time
             FROM tb_area
@@ -15,6 +19,42 @@
         </select>
 
 
+        <insert id="insertArea">
+           INSERT INTO
+		tb_area(area_name,area_desc,priority,
+		create_time,last_edit_time)
+		VALUES
+		(#{areaName},#{areaDesc},#{priority},
+		#{createTime},#{lastEditTime})
+
+        </insert>
+
+        <update id="updateArea" parameterType="com.imooc.o2o.entity.Area">
+            UPDATE tb_area
+            <set>
+               <if test="areaName !=null">area_name=#{areaName},</if>
+                <if test="areaDesc != null">area_desc=#{areaDesc},</if>
+                <if test="priority != null">priority=#{priority},</if>
+                <if test="lastEditTime != null">last_edit_time=#{lastEditTime}</if>
+            </set>
+            where area_id=#{areaId}
+        </update>
+
+        <delete id="deleteArea">
+            DELETE FROM
+            tb_area
+            WHERE
+            area_id=#{areaId}
+        </delete>
+
+    <delete id="batchDeleteArea" parameterType="java.lang.Long">
+        DELETE FROM
+        tb_area
+        WHERE area_id IN
+        <foreach collection="list" item="areaId" open="(" separator="," close=")">
+            #{areaId}
+        </foreach>
+    </delete>
 
     </mapper>
 

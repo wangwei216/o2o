@@ -23,7 +23,6 @@ public class DESUtils {
 	private static String KEY_STR = "myKey";
 	private static String CHARSETNAME = "UTF-8";
 	private static String ALGORITHM = "DES";
-
 	static {
 		try {
 			//这个是生成DES算法对象

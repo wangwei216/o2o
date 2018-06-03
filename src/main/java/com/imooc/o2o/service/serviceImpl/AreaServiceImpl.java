@@ -70,19 +70,68 @@ public class AreaServiceImpl implements AreaService {
         }
     }
 
+    /*
+    * 修改区域的逻辑问题
+    *   1.先进行判断是不是拿到了areaID的值,如果成功就重新set一些创建的时间
+    *
+    * */
     @Override
     public AreaExecution modifyArea(Area area) {
-        return null;
-    }
+        if ( area.getAreaId()>0){
+            area.setCreateTime(new Date());
+            int effectNum = areaDao.updateArea(area);
+            if (effectNum>0){
+                return new AreaExecution(AreaStateEnum.SUCCESS,area);
+            }
+            else {
+                //如果失败的话就返回为空
+                return new AreaExecution(AreaStateEnum.EMPTY);
+            }
+        }
+        else {
+            return new AreaExecution(AreaStateEnum.INNER_ERROR);
+        }
 
+    }
+    /*
+    * 1.serviceImpl的主要的步骤就是先看你穿进来的参数是是不是为空，或者一些判定
+    * 2.
+    * */
     @Override
     public AreaExecution removeArea(long areaId) {
-        return null;
+        if (areaId>0){
+            int effectNum = areaDao.deleteArea(areaId);
+            if (effectNum>0){
+                return new AreaExecution(AreaStateEnum.SUCCESS);
+            }
+            else {
+                return new AreaExecution(AreaStateEnum.INNER_ERROR);
+            }
+        }
+        else {
+            return new AreaExecution(AreaStateEnum.EMPTY);
+        }
+
     }
 
+    /*
+    *
+    * */
     @Override
     public AreaExecution removeAreaList(List<Long> areaIdList) {
-        return null;
+
+        if (areaIdList!=null && areaIdList.size()>0){
+            int effectNum = areaDao.batchDeleteArea(areaIdList);
+            if (effectNum>0){
+                return new AreaExecution(AreaStateEnum.SUCCESS);
+            }
+            else {
+                return new AreaExecution(AreaStateEnum.INNER_ERROR);
+            }
+        }
+       else {
+            return new AreaExecution(AreaStateEnum.EMPTY);
+        }
     }
 
 

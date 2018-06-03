@@ -77,42 +77,51 @@
             <property name="resolveLazily" value="true" />
     </bean>
 
-
-
-
-
-    <!--这个是配置redis的配置文件的-->
-   <!-- <bean id="jedisPoolConfig" class="redis.clients.jedis.JedisPoolConfig">
-        <property name="maxTotal" value="${redis.pool.maxActive}" />
-        <property name="maxIdle" value="${redis.pool.maxIdle}" />
-        <property name="maxWaitMillis" value="${redis.pool.maxWait}" />
-        <property name="testOnBorrow" value="${redis.pool.testOnBorrow}" />
+    <!--这个是进行配置redis的配置文件-->
+    <bean id="poolConfig" class="redis.clients.jedis.JedisPoolConfig">
+        <property name="maxIdle" value="${redis.maxIdle}" />
+        <property name="maxWaitMillis" value="${redis.maxWait}"/>
+        <property name="testOnBorrow" value="${redis.testOnBorrow}"/>
     </bean>
+    <!-- redis服务器中心，类似数据库连接池 -->
+    <bean id="connectionFactory" class="org.springframework.data.redis.connection.jedis.JedisConnectionFactory" >
+        <property name="hostName" value="${redis.host}"></property>
+        <property name="port" value="${redis.port}"></property>
+        <property name="password" value="${redis.pass}"></property>
+        <property name="poolConfig"  ref="poolConfig"></property>
+        <property name="timeout" value="${redis.timeout}"></property>
+    </bean>
+    <!-- 调用连接池工厂配置 -->
+    <bean id="redisTemplate" class=" org.springframework.data.redis.core.RedisTemplate">
+        <property name="connectionFactory" ref="connectionFactory"></property>
 
-    <bean id="jedisWritePool" class="com.imooc.o2o.cache.JedisPoolWriper"
-          depends-on="jedisPoolConfig">
-        <constructor-arg index="0" ref="jedisPoolConfig" />
-        <constructor-arg index="1" value="${redis.hostname}" />
-        <constructor-arg index="2" value="${redis.port}" type="int" />
-    </bean>
-    &lt;!&ndash;Redis的Key的操作&ndash;&gt;
-    <bean id="jedisKeys" class="com.imooc.o2o.cache.JedisUtil$KEYS"
-          scope="singleton">
-        <constructor-arg ref="jedisUtil"></constructor-arg>
-    </bean>
-    &lt;!&ndash;Redis的String的操作&ndash;&gt;
-    <bean id="jedisStrings" class="com.imooc.o2o.cache.JedisUtil$STRINGS"
-          scope="singleton">
-        <constructor-arg ref="jedisUtil"></constructor-arg>
-    </bean>
-    &lt;!&ndash;创建Redis的工具类，封装好Redis的链接&ndash;&gt;
-    <bean id="jedisUtil" class="com.imooc.o2o.cache.JedisUtil"
-          scope="singleton">
-        <property name="jedisPool">
-            <ref bean="jedisWritePool" />
+        <!-- 如果不配置Serializer，那么存储的时候智能使用String，如果用User类型存储，那么会提示错误User can't cast to String -->
+        <property name="keySerializer">
+            <bean class="org.springframework.data.redis.serializer.StringRedisSerializer" />
         </property>
+        <property name="valueSerializer">
+            <bean class="org.springframework.data.redis.serializer.JdkSerializationRedisSerializer" />
+        </property>
+    </bean>
 
-    </bean>-->
+    <!--配置切面拦截方法 -->
+    <!--<aop:config proxy-target-class="true">
+        &lt;!&ndash;将com.test.service包下的所有select开头的方法加入拦截去掉select则加入所有方法 &ndash;&gt;
+        <aop:pointcut id="controllerMethodPointcut" expression="execution(* com.test.service.impl.*.*4redis(..))"/>
+        <aop:pointcut id="selectMethodPointcut" expression="execution(* com.test.dao.*Mapper.*4redis(..))"/>
+        <aop:advisor advice-ref="methodCacheInterceptor" pointcut-ref="controllerMethodPointcut"/>
+    </aop:config>
+    &lt;!&ndash; cache配置 &ndash;&gt;
+    <bean id="methodCacheInterceptor" class="com.test.utils.redis.MethodCacheInterceptor">
+        <property name="redisUtil" ref="redisUtil"/>
+    </bean>
+-->
+
+    <!--这个是吧RedisUtil给注入进spring容器中-->
+    <bean id="redisUtil" class="com.imooc.o2o.cache.RedisUtil">
+        <property name="redisTemplate" ref="redisTemplate"/>
+    </bean>
+
 
 
 
